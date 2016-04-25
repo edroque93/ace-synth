@@ -1,6 +1,6 @@
 # MIPS - ACEsynth
 
-["Fork"] of a MIPS Processor developed during the course of [Processor Architecture] 2015 at UPC. Our goal is to make all the changes needed to synthesize our processor and make it work outside a simulator.
+"[Fork]" of a MIPS Processor developed during the course of [Processor Architecture] 2015 at UPC. Our goal is to make all the changes needed to synthesize our processor and make it work outside a simulator.
 
 This project is part of the course [Processor Design] 2016 at UPC.
 
