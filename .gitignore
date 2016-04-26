@@ -1,5 +1,4 @@
 *.bak
 *.swp
 project/output_files
-project/db
 project/incremental_db

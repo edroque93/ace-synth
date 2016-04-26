@@ -1,3 +1,4 @@
+// Interface between ACE Processor and Altera DE1
 module ace (
     input wire clock_50,
     // Switches
@@ -14,6 +15,14 @@ module ace (
     output wire dram_udqm,
     output wire dram_ras_n,
     output wire dram_we_n,
+    // SRAM
+    output wire [17:0] sram_addr,
+    inout  wire [15:0] sram_dq,
+    output wire sram_we_n,
+    output wire sram_oe_n,
+    output wire sram_ub_n,
+    output wire sram_lb_n,
+    output wire sram_ce_n,
     // 7-Segment display
     output wire [6:0] hex0,
     output wire [6:0] hex1,
@@ -28,5 +37,6 @@ module ace (
 );
 
 // TODO
+// Instantiate Processor Core and Memory Controller
 
 endmodule
