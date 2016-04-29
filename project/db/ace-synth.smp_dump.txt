@@ -1,0 +1,8 @@
+
+State Machine - |ace-top|ace:inst|io_ctrl:io_ctrl|state
+Name state.state_write_hi state.state_write_lo state.state_read_hi state.state_read_lo state.state_idle 
+state.state_idle 0 0 0 0 0 
+state.state_read_lo 0 0 0 1 1 
+state.state_read_hi 0 0 1 0 1 
+state.state_write_lo 0 1 0 0 1 
+state.state_write_hi 1 0 0 0 1 
