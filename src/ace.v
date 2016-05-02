@@ -77,40 +77,49 @@ io_ctrl io_ctrl (
 	 .state(io_state)
 );
 
-segments_converter addr_conv_lo (
-	.value(mem_addr[3:0]),
-	.value_converted(hex6)
-);
-
-segments_converter addr_conv_hi (
-	.value(mem_addr[7:4]),
-	.value_converted(hex7)
-);
-
-segments_converter addr_conv_lolo (
+segments_converter data_conv0 (
 	.value(mem_read_data[3:0]),
 	.value_converted(hex0)
 );
 
-segments_converter addr_conv_lohi (
+segments_converter data_conv1 (
 	.value(mem_read_data[7:4]),
 	.value_converted(hex1)
 );
 
-segments_converter addr_conv_hilo (
+segments_converter data_conv2 (
 	.value(mem_read_data[11:8]),
 	.value_converted(hex2)
 );
 
-segments_converter addr_conv_hihi (
+segments_converter data_conv3 (
 	.value(mem_read_data[15:12]),
 	.value_converted(hex3)
 );
 
-assign hex4 = 127;
-assign hex5 = 127;
+segments_converter data_conv4 (
+	.value(mem_read_data[19:16]),
+	.value_converted(hex4)
+);
+
+segments_converter data_conv5 (
+	.value(mem_read_data[23:20]),
+	.value_converted(hex5)
+);
+
+segments_converter addr_conv6 (
+	.value(mem_addr[3:0]),
+	.value_converted(hex6)
+);
+
+segments_converter addr_conv7 (
+	.value(mem_addr[7:4]),
+	.value_converted(hex7)
+);
+
+
 assign ledr[17:5] = 0;
-assign ledg[5:1] = 0;
+assign ledg[4:1] = 0;
 
 assign ledr[4] = mem_read;
 assign ledr[3] = !sram_oe_n;
@@ -118,7 +127,7 @@ assign ledr[2] = mem_write;
 assign ledr[1] = !sram_we_n;
 assign ledr[0] = mem_ack;
 
-assign ledg[7:6] = io_state;
+assign ledg[7:5] = io_state;
 
 assign ledg[0] = better_clock;
 

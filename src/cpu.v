@@ -19,7 +19,7 @@ localparam [1:0] state_pre_write   = 2'b00,
 always @(posedge clk) begin
 	mem_read <= 1;
 	if (mem_ack) begin
-		mem_addr <= mem_addr + 1;
+		mem_addr <= mem_addr + 2;
 	end
 end
 
