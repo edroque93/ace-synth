@@ -55,8 +55,7 @@ cpu cpu (
     .mem_ack(mem_ack),
     .mem_addr(mem_addr),
     .mem_read_data(mem_read_data),
-    .mem_write_data(mem_write_data),
-	 .state(cpu_state)
+    .mem_write_data(mem_write_data)
 );
 
 io_ctrl io_ctrl (
@@ -78,19 +77,49 @@ io_ctrl io_ctrl (
 	 .state(io_state)
 );
 
-assign hex0 = 127;
-assign hex1 = 127;
-assign hex2 = 127;
-assign hex3 = 127;
+segments_converter addr_conv_lo (
+	.value(mem_addr[3:0]),
+	.value_converted(hex6)
+);
+
+segments_converter addr_conv_hi (
+	.value(mem_addr[7:4]),
+	.value_converted(hex7)
+);
+
+segments_converter addr_conv_lolo (
+	.value(mem_read_data[3:0]),
+	.value_converted(hex0)
+);
+
+segments_converter addr_conv_lohi (
+	.value(mem_read_data[7:4]),
+	.value_converted(hex1)
+);
+
+segments_converter addr_conv_hilo (
+	.value(mem_read_data[11:8]),
+	.value_converted(hex2)
+);
+
+segments_converter addr_conv_hihi (
+	.value(mem_read_data[15:12]),
+	.value_converted(hex3)
+);
+
 assign hex4 = 127;
 assign hex5 = 127;
-assign hex6 = 127;
-assign hex7 = 127;
-assign ledr[7:3] = 0;
-assign ledr[2:0] = io_state;
-assign ledg[8:2] = 0;
-assign ledg[1:0] = cpu_state;
+assign ledr[17:5] = 0;
+assign ledg[5:1] = 0;
 
-assign ledr[17-:8] = mem_read_data[7:0];
+assign ledr[4] = mem_read;
+assign ledr[3] = !sram_oe_n;
+assign ledr[2] = mem_write;
+assign ledr[1] = !sram_we_n;
+assign ledr[0] = mem_ack;
+
+assign ledg[7:6] = io_state;
+
+assign ledg[0] = better_clock;
 
 endmodule
