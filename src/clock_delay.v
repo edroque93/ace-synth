@@ -3,7 +3,7 @@ module clock_delay (
     output reg clk_new = 0
 );
 
-parameter [31:0] max = 10_000_000; // 0.5 clk per second
+parameter [31:0] max = 10_000_000; // edit
 
 reg [31:0] counter = 32'b0;
 
