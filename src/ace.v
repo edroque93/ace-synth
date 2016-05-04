@@ -2,7 +2,7 @@
 module ace (
     input wire clock_50,
     // Switches
-    input wire [9:0] sw,
+    input wire [17:0] sw,
     // SRAM
     output wire [19:0] sram_addr,
     inout  wire [15:0] sram_dq,
@@ -42,93 +42,65 @@ wire [2:0] io_state;
 wire [1:0] cpu_state;
 
 wire better_clock;
+wire reset_reseter;
 
 clock_delay clock_delay (
 	.clk(clock_50),
 	.clk_new(better_clock)
 );
 
+reseter reseter (
+	.clk(better_clock),
+	.reset(reset_reseter)
+);
+
 cpu cpu (
-    .clk(better_clock),
-    .mem_read(mem_read),
-    .mem_write(mem_write),
-    .mem_ack(mem_ack),
-    .mem_addr(mem_addr),
-    .mem_read_data(mem_read_data),
-    .mem_write_data(mem_write_data)
+	.clk(clock_50),
+	.reset(!key[0]  | reset_reseter),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.mem_ack(mem_ack),
+	.mem_addr(mem_addr),
+	.mem_read_data(mem_read_data),
+	.mem_write_data(mem_write_data),
+	// debug
+	.hex0(hex0),
+	.hex1(hex1),
+	.hex2(hex2),
+	.hex3(hex3),
+	.hex4(hex4),
+	.hex5(hex5),
+	.hex6(hex6),
+	.hex7(hex7)
 );
 
 io_ctrl io_ctrl (
-    .clk(better_clock),
-    .sw(sw),
-    .sram_addr(sram_addr),
-    .sram_dq(sram_dq),
-    .sram_we_n(sram_we_n),
-    .sram_oe_n(sram_oe_n),
-    .sram_ub_n(sram_ub_n), 
-    .sram_lb_n(sram_lb_n), 
-    .sram_ce_n(sram_ce_n),
-    .mem_read(mem_read),
-    .mem_write(mem_write),
-    .mem_ack(mem_ack),
-    .mem_addr(mem_addr),
-    .mem_read_data(mem_read_data),
-    .mem_write_data(mem_write_data),
-	 .state(io_state)
+	.clk(clock_50),
+	.reset(!key[0] | reset_reseter),
+	.sw(sw),
+	.key(key[3:1]),
+	.ledr(ledr),
+	.sram_addr(sram_addr),
+	.sram_dq(sram_dq),
+	.sram_we_n(sram_we_n),
+	.sram_oe_n(sram_oe_n),
+	.sram_ub_n(sram_ub_n), 
+	.sram_lb_n(sram_lb_n), 
+	.sram_ce_n(sram_ce_n),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
+	.mem_ack(mem_ack),
+	.mem_addr(mem_addr),
+	.mem_read_data(mem_read_data),
+	.mem_write_data(mem_write_data),
+	.state(io_state)
 );
 
-segments_converter data_conv0 (
-	.value(mem_read_data[3:0]),
-	.value_converted(hex0)
-);
-
-segments_converter data_conv1 (
-	.value(mem_read_data[7:4]),
-	.value_converted(hex1)
-);
-
-segments_converter data_conv2 (
-	.value(mem_read_data[11:8]),
-	.value_converted(hex2)
-);
-
-segments_converter data_conv3 (
-	.value(mem_read_data[15:12]),
-	.value_converted(hex3)
-);
-
-segments_converter data_conv4 (
-	.value(mem_read_data[19:16]),
-	.value_converted(hex4)
-);
-
-segments_converter data_conv5 (
-	.value(mem_read_data[23:20]),
-	.value_converted(hex5)
-);
-
-segments_converter addr_conv6 (
-	.value(mem_addr[3:0]),
-	.value_converted(hex6)
-);
-
-segments_converter addr_conv7 (
-	.value(mem_addr[7:4]),
-	.value_converted(hex7)
-);
-
-
-assign ledr[17:5] = 0;
-assign ledg[4:1] = 0;
-
-assign ledr[4] = mem_read;
-assign ledr[3] = !sram_oe_n;
-assign ledr[2] = mem_write;
-assign ledr[1] = !sram_we_n;
-assign ledr[0] = mem_ack;
-
-assign ledg[7:5] = io_state;
-
+// Secuestrados.... MUAHAHAHHAHA
+assign ledg[7:4] = 0;
+assign ledg[3] = mem_read;
+assign ledg[2] = mem_write;
+assign ledg[1] = !key[0] | reset_reseter;
 assign ledg[0] = better_clock;
 
 endmodule

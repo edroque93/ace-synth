@@ -21,7 +21,7 @@ applicable agreement for further details.
 (header "graphic" (version "1.4"))
 (pin
 	(input)
-	(rect 336 168 504 184)
+	(rect 376 248 544 264)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
 	(text "clock_50" (rect 5 0 49 11)(font "Arial" ))
 	(pt 168 8)
@@ -37,9 +37,9 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 336 184 504 200)
+	(rect 376 264 544 280)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
-	(text "sw[9..0]" (rect 5 0 43 11)(font "Arial" ))
+	(text "sw[17..0]" (rect 5 0 49 11)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -53,7 +53,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect 336 200 504 216)
+	(rect 376 280 544 296)
 	(text "INPUT" (rect 125 0 154 10)(font "Arial" (font_size 6)))
 	(text "key[3..0]" (rect 5 0 47 11)(font "Arial" ))
 	(pt 168 8)
@@ -69,7 +69,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 168 891 184)
+	(rect 752 248 931 264)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_addr[19..0]" (rect 90 0 173 11)(font "Arial" ))
 	(pt 0 8)
@@ -85,7 +85,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 200 888 216)
+	(rect 752 280 928 296)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_we_n" (rect 90 0 149 11)(font "Arial" ))
 	(pt 0 8)
@@ -101,7 +101,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 216 888 232)
+	(rect 752 296 928 312)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_oe_n" (rect 90 0 146 11)(font "Arial" ))
 	(pt 0 8)
@@ -117,7 +117,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 232 888 248)
+	(rect 752 312 928 328)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_ub_n" (rect 90 0 146 11)(font "Arial" ))
 	(pt 0 8)
@@ -133,7 +133,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 248 888 264)
+	(rect 752 328 928 344)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_lb_n" (rect 90 0 143 11)(font "Arial" ))
 	(pt 0 8)
@@ -149,7 +149,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 264 888 280)
+	(rect 752 344 928 360)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "sram_ce_n" (rect 90 0 146 11)(font "Arial" ))
 	(pt 0 8)
@@ -165,7 +165,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 280 888 296)
+	(rect 752 360 928 376)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex0[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -181,7 +181,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 296 888 312)
+	(rect 752 376 928 392)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex1[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -197,7 +197,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 312 888 328)
+	(rect 752 392 928 408)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex2[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -213,7 +213,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 328 888 344)
+	(rect 752 408 928 424)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex3[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -229,7 +229,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 344 888 360)
+	(rect 752 424 928 440)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex4[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -245,7 +245,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 360 888 376)
+	(rect 752 440 928 456)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex5[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -261,7 +261,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 376 888 392)
+	(rect 752 456 928 472)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex6[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -277,7 +277,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 392 888 408)
+	(rect 752 472 928 488)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "hex7[6..0]" (rect 90 0 138 11)(font "Arial" ))
 	(pt 0 8)
@@ -293,7 +293,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 408 888 424)
+	(rect 752 488 928 504)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "ledr[17..0]" (rect 90 0 139 11)(font "Arial" ))
 	(pt 0 8)
@@ -309,7 +309,7 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 712 424 888 440)
+	(rect 752 504 928 520)
 	(text "OUTPUT" (rect 1 0 41 10)(font "Arial" (font_size 6)))
 	(text "ledg[8..0]" (rect 90 0 136 11)(font "Arial" ))
 	(pt 0 8)
@@ -325,7 +325,7 @@ applicable agreement for further details.
 )
 (pin
 	(bidir)
-	(rect 712 184 888 200)
+	(rect 752 264 928 280)
 	(text "BIDIR" (rect 1 0 28 10)(font "Arial" (font_size 6)))
 	(text "sram_dq[15..0]" (rect 90 0 164 11)(font "Arial" ))
 	(pt 0 8)
@@ -341,7 +341,7 @@ applicable agreement for further details.
 	(text "VCC" (rect 4 7 25 17)(font "Arial" (font_size 6)))
 )
 (symbol
-	(rect 504 144 712 480)
+	(rect 544 224 752 560)
 	(text "ace" (rect 5 0 25 11)(font "Arial" ))
 	(text "inst" (rect 8 320 26 331)(font "Arial" ))
 	(port
@@ -354,8 +354,8 @@ applicable agreement for further details.
 	(port
 		(pt 0 48)
 		(input)
-		(text "sw[9..0]" (rect 0 0 38 11)(font "Arial" ))
-		(text "sw[9..0]" (rect 21 43 59 54)(font "Arial" ))
+		(text "sw[17..0]" (rect 0 0 44 11)(font "Arial" ))
+		(text "sw[17..0]" (rect 21 43 65 54)(font "Arial" ))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
