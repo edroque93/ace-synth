@@ -56,7 +56,7 @@ module io_ctrl(
 	input wire [31:0] mem_addr,
 	output reg [31:0] mem_read_data,
 	input wire [31:0] mem_write_data,
-	 output reg [2:0] state
+	output reg [2:0] state
 );
 
 // Sync registers
