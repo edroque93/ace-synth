@@ -6,7 +6,7 @@ module segments_converter(
 
 always @* begin
 	if (enable) begin
-		case(value) 
+		case(value)
 			0: value_converted <= 7'b1000000;
 			1: value_converted <= 7'b1111001;
 			2: value_converted <= 7'b0100100;
@@ -17,10 +17,10 @@ always @* begin
 			7: value_converted <= 7'b1111000;
 			8: value_converted <= 7'b0000000;
 			9: value_converted <= 7'b0011000;
-			10: value_converted <= 7'b0001000;  //A
-			11: value_converted <= 7'b0000011;  //B
-			12: value_converted <= 7'b1000110;  //C
-			13: value_converted <= 7'b0100001;  //D
+			10: value_converted <= 7'b0001000; // A
+			11: value_converted <= 7'b0000011; // B
+			12: value_converted <= 7'b1000110; // C
+			13: value_converted <= 7'b0100001; // D
 			14: value_converted <= 7'b0000110; // E
 			15: value_converted <= 7'b0001110; // F
 			default: value_converted <= 7'b1111111;

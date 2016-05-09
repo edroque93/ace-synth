@@ -17,45 +17,45 @@
 // ================================
 
 module io_ctrl(
-    // =============================
-    // Interface with Altera DE2-115
-    // =============================
-    input wire clk,
-    input wire reset,
-    // Switches
-    input wire [17:0] sw,
-    // SRAM
-    output reg [19:0] sram_addr,
-    inout wire [15:0] sram_dq,
-    output reg sram_we_n,
-    output reg sram_oe_n,
-    output wire sram_ub_n,
-    output wire sram_lb_n,
-    output wire sram_ce_n,
-    // 7-Segment display
-    output reg [6:0] hex0,
-    output reg [6:0] hex1,
-    output reg [6:0] hex2,
-    output reg [6:0] hex3,
-    output reg [6:0] hex4,
-    output reg [6:0] hex5,
-    output reg [6:0] hex6,
-    output reg [6:0] hex7,
-    // Buttons
-    input wire [2:0] key,
-    // Red LEDs
-    output reg [17:0] ledr,
-    // Green LEDs
-    output reg [8:0] ledg,
-    // ===========================
-    // Interface with ACE Core
-    // ===========================
-    input wire mem_read,
-    input wire mem_write,
-    output reg mem_ack,
-    input wire [31:0] mem_addr,
-    output reg [31:0] mem_read_data,
-    input wire [31:0] mem_write_data,
+	// =============================
+	// Interface with Altera DE2-115
+	// =============================
+	input wire clk,
+	input wire reset,
+	// Switches
+	input wire [17:0] sw,
+	// SRAM
+	output reg [19:0] sram_addr,
+	inout wire [15:0] sram_dq,
+	output reg sram_we_n,
+	output reg sram_oe_n,
+	output wire sram_ub_n,
+	output wire sram_lb_n,
+	output wire sram_ce_n,
+	// 7-Segment display
+	output reg [6:0] hex0,
+	output reg [6:0] hex1,
+	output reg [6:0] hex2,
+	output reg [6:0] hex3,
+	output reg [6:0] hex4,
+	output reg [6:0] hex5,
+	output reg [6:0] hex6,
+	output reg [6:0] hex7,
+	// Buttons
+	input wire [2:0] key,
+	// Red LEDs
+	output reg [17:0] ledr,
+	// Green LEDs
+	output reg [8:0] ledg,
+	// ===========================
+	// Interface with ACE Core
+	// ===========================
+	input wire mem_read,
+	input wire mem_write,
+	output reg mem_ack,
+	input wire [31:0] mem_addr,
+	output reg [31:0] mem_read_data,
+	input wire [31:0] mem_write_data,
 	 output reg [2:0] state
 );
 
@@ -172,8 +172,8 @@ always @* begin
 					select_next  = 1'b1;
 					we_next      = 1'b0;
 					oe_next      = 1'b1;
-					memwr_buffer = mem_write_data[15:0]; 
-					wr_next      = mem_write_data[31:16]; 
+					memwr_buffer = mem_write_data[15:0];
+					wr_next      = mem_write_data[31:16];
 					state_next   = state_write_hi;
 				end
 			end
@@ -184,7 +184,7 @@ always @* begin
 			we_next      = 1'b1;
 			oe_next      = 1'b0;
 			ack_next     = 1'b0;
-			word [31:16] = sram_dq; 
+			word [31:16] = sram_dq;
 			state_next   = state_read_lo;
 		end
 		state_read_lo: begin
@@ -201,7 +201,7 @@ always @* begin
 			we_next     = 1'b0;
 			oe_next     = 1'b1;
 			ack_next    = 1'b0;
-			wr_next     = memwr_buffer; 
+			wr_next     = memwr_buffer;
 			state_next  = state_write_lo;
 		end
 		state_write_lo: begin

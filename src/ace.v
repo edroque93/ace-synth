@@ -1,31 +1,31 @@
 // Interface between ACE Processor and Altera DE2
 module ace (
-    input wire clock_50,
-    // Switches
-    input wire [17:0] sw,
-    // SRAM
-    output wire [19:0] sram_addr,
-    inout  wire [15:0] sram_dq,
-    output wire sram_we_n,
-    output wire sram_oe_n,
-    output wire sram_ub_n,
-    output wire sram_lb_n,
-    output wire sram_ce_n,
-    // 7-Segment display
-    output wire [6:0] hex0,
-    output wire [6:0] hex1,
-    output wire [6:0] hex2,
-    output wire [6:0] hex3,
-    output wire [6:0] hex4,
-    output wire [6:0] hex5,
-    output wire [6:0] hex6,
-    output wire [6:0] hex7,
-    // Buttons
-    input wire [3:0] key,
-    // Red LEDs
-    output wire [17:0] ledr,
-    // Green LEDs
-    output wire [8:0] ledg
+	input wire clock_50,
+	// Switches
+	input wire [17:0] sw,
+	// SRAM
+	output wire [19:0] sram_addr,
+	inout  wire [15:0] sram_dq,
+	output wire sram_we_n,
+	output wire sram_oe_n,
+	output wire sram_ub_n,
+	output wire sram_lb_n,
+	output wire sram_ce_n,
+	// 7-Segment display
+	output wire [6:0] hex0,
+	output wire [6:0] hex1,
+	output wire [6:0] hex2,
+	output wire [6:0] hex3,
+	output wire [6:0] hex4,
+	output wire [6:0] hex5,
+	output wire [6:0] hex6,
+	output wire [6:0] hex7,
+	// Buttons
+	input wire [3:0] key,
+	// Red LEDs
+	output wire [17:0] ledr,
+	// Green LEDs
+	output wire [8:0] ledg
 );
 
 // TODO
@@ -84,8 +84,8 @@ io_ctrl io_ctrl (
 	.sram_dq(sram_dq),
 	.sram_we_n(sram_we_n),
 	.sram_oe_n(sram_oe_n),
-	.sram_ub_n(sram_ub_n), 
-	.sram_lb_n(sram_lb_n), 
+	.sram_ub_n(sram_ub_n),
+	.sram_lb_n(sram_lb_n),
 	.sram_ce_n(sram_ce_n),
 	.mem_read(mem_read),
 	.mem_write(mem_write),
