@@ -42,6 +42,7 @@ wire [2:0] io_state;
 wire [1:0] cpu_state;
 
 wire better_clock;
+wire cpu_clock = better_clock;
 wire reset_reseter;
 
 clock_delay clock_delay (
@@ -50,12 +51,12 @@ clock_delay clock_delay (
 );
 
 reseter reseter (
-	.clk(better_clock),
+	.clk(cpu_clock),
 	.reset(reset_reseter)
 );
 
 cpu cpu (
-	.clk(clock_50),
+	.clk(cpu_clock),
 	.reset(!key[0]  | reset_reseter),
 	.mem_read(mem_read),
 	.mem_write(mem_write),
@@ -75,7 +76,7 @@ cpu cpu (
 );
 
 io_ctrl io_ctrl (
-	.clk(clock_50),
+	.clk(cpu_clock),
 	.reset(!key[0] | reset_reseter),
 	.sw(sw),
 	.key(key[3:1]),
@@ -101,6 +102,6 @@ assign ledg[7:4] = 0;
 assign ledg[3] = mem_read;
 assign ledg[2] = mem_write;
 assign ledg[1] = !key[0] | reset_reseter;
-assign ledg[0] = better_clock;
+assign ledg[0] = cpu_clock;
 
 endmodule
