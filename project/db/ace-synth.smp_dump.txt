@@ -1,7 +1,7 @@
 
-State Machine - |ace-top|ace:inst|cpu:cpu|next
-Name next.11 next.10 next.01 next.00 
-next.00 0 0 0 0 
-next.01 0 0 1 1 
-next.10 0 1 0 1 
-next.11 1 0 0 1 
+State Machine - |ace-top|ace:inst|cpu:cpu|arbiter:arbiter|state
+Name state.state_dc_write state.state_dc_read state.state_ic_read state.state_idle 
+state.state_idle 0 0 0 0 
+state.state_ic_read 0 0 1 1 
+state.state_dc_read 0 1 0 1 
+state.state_dc_write 1 0 0 1 

@@ -98,7 +98,8 @@ io_ctrl io_ctrl (
 );
 
 // Secuestrados.... MUAHAHAHHAHA
-assign ledg[7:4] = 0;
+assign ledg[7:5] = 0;
+assign ledg[4] = mem_ack;
 assign ledg[3] = mem_read;
 assign ledg[2] = mem_write;
 assign ledg[1] = !key[0] | reset_reseter;
