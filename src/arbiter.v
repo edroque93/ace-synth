@@ -31,8 +31,8 @@ reg [31:0] ic_read_data_next;
 reg dc_read_ack_next;
 reg [31:0] dc_read_data_next;
 reg dc_write_ack_next;
-reg [31:0] mem_read_next;
-reg [31:0] mem_write_next;
+reg mem_read_next;
+reg mem_write_next;
 reg [31:0] mem_addr_next;
 reg [31:0] mem_data_write_next;
 
