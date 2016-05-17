@@ -1,0 +1,33 @@
+# do ace-synth_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying /opt/altera/q2web/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied /opt/altera/q2web/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src {/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/ace.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module ace
+# 
+# Top level modules:
+# 	ace
+# vlog -vlog01compat -work work +incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src {/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/clock_delay.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module clock_delay
+# 
+# Top level modules:
+# 	clock_delay
+# vlog -vlog01compat -work work +incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src {/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/io_ctrl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module io_ctrl
+# ** Error: /home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/io_ctrl.v(82): (vlog-2730) Undefined variable: 'state_idle'.
+# ** Error: /home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/io_ctrl.v(106): 'state_idle' already declared in this scope.
+# ** Error: /opt/altera/q2web/modelsim_ase/linuxaloem/vlog failed.
+# Error in macro ./ace-synth_run_msim_rtl_verilog.do line 10
+# /opt/altera/q2web/modelsim_ase/linuxaloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src {/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/io_ctrl.v}"

@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/ediaz/Documents/UPC/Q2/PD/ace-synth/project/simulation/modelsim
+vace
+I[;c>@L77F8_B]]4@>YVP^3
+V`5ohzPW]E;z<6Xe[0HWdW1
+Z1 d/home/ediaz/Documents/UPC/Q2/PD/ace-synth/project/simulation/modelsim
+Z2 w1463058792
+8/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/ace.v
+F/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/ace.v
+L0 2
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+!i10b 1
+!s100 ZVoQSGz4<;:o0DffX`]`j3
+!s85 0
+!s108 1463061420.313680
+!s107 /home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/ace.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src|/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/ace.v|
+!s101 -O0
+Z5 !s92 -vlog01compat -work work +incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src -O0
+vclock_delay
+!i10b 1
+!s100 PSjA9j5=Hh2Qa;3;QEnlj0
+ISfJzSYTbS2g8?[D=X6F6[2
+VBJD9Q]WWcHi5nEM8LPDdF1
+R1
+R2
+8/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/clock_delay.v
+F/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/clock_delay.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1463061420.330180
+!s107 /home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/clock_delay.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src|/home/ediaz/Documents/UPC/Q2/PD/ace-synth/src/clock_delay.v|
+!s101 -O0
+R4
+R5

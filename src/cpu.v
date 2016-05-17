@@ -22,114 +22,101 @@ module cpu (
 wire [31:0] debug_hex;
 wire enable_hex = 1'b1;
 
-wire ic_read_ack;
-wire [31:0] ic_read_data;
-reg [31:0] ic_read_addr;
-
-arbiter arbiter(
-	.clk(clk),
+flow_ctrl flow_ctrl(
 	.reset(reset),
-	// IF Stage (ic)
-	.ic_read_req(1),
-	.ic_read_ack(ic_read_ack),
-	.ic_read_addr(ic_read_addr),
-	.ic_read_data(ic_read_data),
-	// MEM Stage (dc)
-	.dc_read_req(0),
-	//output reg dc_read_ack,
-	.dc_read_addr(0),
-	//output reg [31:0] dc_read_data,
-	.dc_write_req(0),
-	//output reg dc_write_ack,
-	.dc_write_addr(0),
-	.dc_write_data(0),
-	// IOCTRL Interface
-	.mem_read(mem_read),
-	.mem_write(mem_write),
-	.mem_ack(mem_ack),
-	.mem_addr(mem_addr),
-	.mem_data_write(mem_write_data),
-	.mem_data_read(mem_read_data)
+	//.dc_stall,
+	//.is_branch,
+	//.is_jump,
+	//.hzd_stall,
+	//.ic_stall,
+	//.pc_we,
+	//.pc_reset,
+	//.if_we,
+	.if_reset(if_stage.reset)
+	//.id_we,
+	//.id_reset,
+	//.ex_we,
+	//.ex_reset,
+	//.mem_we,
+	//.mem_reset,
+	//.wb_we,
+	//.wb_reset
 );
 
-always @(posedge clk or posedge reset) begin
-	if (reset) begin
-		ic_read_addr <= 0;
-	end else begin
-		if (ic_read_ack) begin
-			ic_read_addr <= ic_read_addr + 32'd4;
-		end
-	end
-end
-
-assign debug_hex = ic_read_addr;
-
-//pc pc (
-//	.clk(clk),
-//	.reset(reset),
-//	.we(pc_we),
-//	.is_jump(ex_isjump),
-//	.is_kernel(cop_reset),
-//	.is_branch(pc_take_branch & ~mem_bp_opinion),
-//	.is_eret(ex_exc_ret),
-//	.is_bpredictor(if_bp_opinion & if_bp_btaken),
-//	.is_misspred(bp_misspredicted),
-//	.dst_nextpc(if_pc_next),
-//	.dst_jump(dst_jump),
-//	.dst_branch(mem_pc_branch),
-//	.dst_kernel(address_kernel),
-//	.dst_eret(epc),
-//	.dst_prediction(if_bp_addr),
-//	.dst_misspred(bp_misspredicted_addr),
-//	.initial_pc(32'd0),
-//	.pc_out(pc_out)
-//);
-//
-//if_stage if_stage (
-//	.clk(clk),
-//	.reset(if_reset),
-//	// Inputs
-//	.pc(),
+if_stage if_stage (
+	.clk(clk),
+	.reset(flow_ctrl.if_reset)
+//	input wire we,
+//	// Control signals
+//	// - Flow
+//	input wire pc_reset,
+//	input wire pc_we,
+//	// - Branch predictor (TODO)
+//	// - Kernel control (TODO)
+//	// - Branch control
+//	input is_jump,
+//	input is_branch,
+//	input wire [31:0] jump_addr,
+//	input wire [31:0] branch_addr,
+//	// - Arbiter Control
+//	output reg read_req,
+//	input wire read_ack,
+//	output reg [31:0] read_addr,
+//	input wire [31:0] read_data,	
 //	// Outputs
-//	.instr(),
-//	.pc_next()
-//	// Shared
-//	.addr(),
-//	.data()
-//);
+//	output reg [31:0] instruction,
+//	output reg [31:0] pc_next,
+//	output reg hit
+);
 //
-//id_stage id_stage (
-//	.clk(clk),
-//	.reset(id_reset),
+//module id_stage (
+//	input wire clk,
+//	input wire reset,
+//	input wire we,
+//	// Control signals
+//	// Forward
+//	output wire [4:0] rs_probe,
+//	output wire [4:0] rt_probe,
+//	input wire [1:0] ctrl_rs,
+//	input wire [1:0] ctrl_rt,
+//	input wire [31:0] ex_data,
+//	input wire [31:0] mem_data,
+//	input wire [31:0] wb_data,
 //	// Inputs
-//	.instr(),
-//	.pc_next_in(),
+//	input wire [31:0] instruction,
+//	input wire [31:0] pc_next,
 //	// Outputs
-//	.pc_next_out(),
-//);
-//
-//ex_stage ex_stage (
-//	.clk(clk),
-//	.reset(ex_reset),
-//	// Inputs
-//	.pc_next(),
-//	// Outputs
-//);
-//
-//mem_stage mem_stage (
-//	.clk(clk),
-//	.reset(mem_reset),
-//	// Inputs
-//	// Outputs
-//);
-//
-//wb_stage wb_stage (
-//	.clk(clk),
-//	.reset(wb_reset),
-//	// Inputs
-//	// Outputs
+//	// - Execute
+//	output reg alu_s,
+//	output reg alu_t,
+//	output reg alu_op,
+//	output reg dst_reg,
+//	output reg is_link,
+//	output reg is_jump,
+//	output reg dst_jump,
+//	output reg [31:0] pc_jump,
+//	output reg [31:0] pc_next_out,
+//	output reg [31:0] data_s,
+//	output reg [31:0] data_t,
+//	output reg [31:0] data_c0,
+//	output reg [5:0] opcode,
+//	output reg [4:0] reg_s,
+//	output reg [4:0] reg_t,
+//	output reg [4:0] reg_d,
+//	// - Mem
+//	output reg is_branch,
+//	output reg mem_read,
+//	output reg mem_write,
+//	output reg mem_type,
+//	output reg mem_to_reg,
+//	// - Wb
+//	output reg reg_write,
+//	output reg c0_write
 //);
 
+
+
+// DEBUG every time you use this to debug a kitten dies
 
 segments_converter data_conv0 (
 	.enable(enable_hex),
