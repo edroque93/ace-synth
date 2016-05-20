@@ -1,4 +1,20 @@
 To install cocotb:
 
 sudo apt-get install git make gcc g++ swig python-dev
-git submodule init
+git submodule update --init
+
+Modules to test:
+
+if_stage  => Adrian
+id_stage  => Enrique
+ex_stage  => Enrique
+mem_stage => Calvin
+wb_stage  => Adrian
+arbiter   => Calvin
+io_ctrl   => Calvin
+*_ctrl    => Adrian
+cache     => Calvin
+regfile   => Enrique
+alu       => Enrique
+control   => Adrian
+

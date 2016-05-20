@@ -2,3 +2,6 @@
 *.swp
 project/output_files
 project/incremental_db
+
+tests/**/*.pyc
+tests/**/sim_build
