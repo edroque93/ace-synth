@@ -64,16 +64,16 @@ def alu_or(dut):
 def alu_add(dut):
 	"""ALU ADD"""
 	for i in range(0, iterations):
-		s = random.randint(0,0xFFFFFFFF)
-		t = random.randint(0,0xFFFFFFFF)
+		s = random.randint(0,0x7FFFFFFF)
+		t = random.randint(0,0x7FFFFFFF)
 		dut.s = s
 		dut.t = t
 		dut.aluop = op['ADD']
 		yield Timer(1)
 		if (s+t) & 0xFFFFFFFF != int(dut.out):
 			raise TestFailure("Wrong result: %d, %d = %s" % (s,t,str(dut.out)))
-		if ((s+t) > 0xFFFFFFFF) != int(dut.overflow):
-			raise TestFailure("Wrong result: %d, %d = %s" % (s,t,str(dut.out)))
+		if ((s+t) > 0x7FFFFFFF) != int(dut.overflow):
+			raise TestFailure("Wrong result (of): %d, %d = %s" % (s,t,str(dut.out)))
 
 @cocotb.test()
 def alu_nor(dut):

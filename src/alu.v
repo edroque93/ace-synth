@@ -36,16 +36,14 @@ always @* begin
         `ALUOP_ADD: begin
 			zero <= 0;
 			out <= s + t;
-			overflow <= (s+t) > 33'h0FFFFFFFF; // optimize me pls
-			//if((s[31] == t[31]) && (out[31] != s[31])) overflow <= 1;
-			//else overflow <= 0;
+			if((s[31] == t[31]) && (out[31] != s[31])) overflow <= 1;
+			else overflow <= 0;
 		end
         `ALUOP_SUB: begin
 			zero <= 0;
 			out <= s - t;
-			// ?
-			// if((s[31] != t[31]) && (out[31] != s[31])) overflow <= 1;
-			// else overflow <= 0;
+			if((s[31] != t[31]) && (out[31] != s[31])) overflow <= 1;
+			else overflow <= 0;
 		end	
         `ALUOP_AND: begin
 			zero <= 0;

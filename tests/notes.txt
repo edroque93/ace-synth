@@ -14,7 +14,7 @@ arbiter   => Calvin
 io_ctrl   => Calvin
 *_ctrl    => Adrian
 cache     => Calvin
-regfile   => Enrique
-alu       => Enrique
+regfile   => Enrique [x]
+alu       => Enrique [x]
 control   => Adrian
 
