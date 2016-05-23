@@ -1,26 +1,27 @@
 module if_stage (
-	input wire clk,
-	input wire reset,
+	input wire 	  clk,
+	input wire 	  reset,
+	input wire 	  we,
 	// Control signals
 	// - Flow
-	input wire pc_reset,
-	input wire pc_we,
+	input wire 	  pc_reset,
+	input wire 	  pc_we,
 	// - Branch predictor (TODO)
 	// - Kernel control (TODO)
 	// - Branch control
-	input is_jump,
-	input is_branch,
+	input 		  is_jump,
+	input 		  is_branch,
 	input wire [31:0] jump_addr,
 	input wire [31:0] branch_addr,
 	// - Arbiter Control
-	output reg read_req,
-	input wire read_ack,
+	output reg 	  read_req,
+	input wire 	  read_ack,
 	output reg [31:0] read_addr=0,
 	input wire [31:0] read_data,
 	// Outputs
 	output reg [31:0] instruction=0,
 	output reg [31:0] pc_next=0,
-	output reg hit=0
+	output reg 	  hit=0
 );
 
 reg [31:0] pc_interm, pc_real, pc_now, pc_next_next;
@@ -38,12 +39,14 @@ always @(posedge clk) begin
       pc_next <= 32'd0;
       hit <= 0;
    end else begin
-      state <= state_next;
-      read_req <= read_req_next;
-      read_addr <= pc_next_next;
-		pc_next <= pc_next_next + 4;
-      instruction <= instruction_next;
-      hit <= hit_next;
+      if(we) begin
+	 state <= state_next;
+	 read_req <= read_req_next;
+	 read_addr <= pc_next_next;
+	 pc_next <= pc_next_next + 4;
+	 instruction <= instruction_next;
+	 hit <= hit_next;
+      end
    end
 end
 
@@ -61,7 +64,7 @@ always @* begin
        if (pc_reset) begin
 	       pc_next_next = 32'd0;
 	    end else if(pc_we) begin
-		    pc_now = pc_next + 4;
+	       pc_now = pc_next + 4;
 	       pc_interm = is_jump ? jump_addr : pc_now;
 	       pc_next_next = is_branch ? branch_addr : pc_interm;
        end
