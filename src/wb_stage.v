@@ -24,7 +24,7 @@ always @(posedge clk) begin
 	    reg_addr_out <= reg_addr;
 	    reg_write_out <= reg_write;
 	 end
-   end // else: !if(reset)
-end // always @ (posedge clk)
+   end
+end
 
-endmodule // wb_stage
+endmodule
