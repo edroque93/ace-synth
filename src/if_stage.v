@@ -1,6 +1,7 @@
 module if_stage (
 	input wire 	  clk,
 	input wire 	  reset,
+	input wire 	  flush,
 	input wire 	  we,
 	// Control signals
 	// - Flow
@@ -24,7 +25,7 @@ module if_stage (
 	output reg 	  hit=0
 );
 
-reg [31:0] pc_interm, pc_real, pc_now, pc_next_next;
+reg [31:0] pc_interm, pc_real, pc_next_next;
 reg state, state_next;
 reg read_req_next;
 reg [31:0] instruction_next;
@@ -34,6 +35,11 @@ always @(posedge clk) begin
    if (reset) begin
       state <= state_idle;
       read_req <= 0;
+      read_addr <= 32'd0;
+      instruction <= 32'd0;
+      pc_next <= 32'd0;
+      hit <= 0;
+   end else if(flush) begin
       read_addr <= 32'd0;
       instruction <= 32'd0;
       pc_next <= 32'd0;
@@ -59,13 +65,13 @@ always @* begin
    hit_next = 1'b0;
 
   case (state)
+
     state_idle: begin
        state_next = state_read;
        if (pc_reset) begin
 	       pc_next_next = 32'd0;
 	    end else if(pc_we) begin
-	       pc_now = pc_next + 4;
-	       pc_interm = is_jump ? jump_addr : pc_now;
+	       pc_interm = is_jump ? jump_addr : pc_next;
 	       pc_next_next = is_branch ? branch_addr : pc_interm;
        end
        read_req_next = 1'b1;
