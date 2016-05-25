@@ -1,13 +1,13 @@
 `ifndef _alucontrol
 `define _alucontrol
 
-`include "defines.v"
+`include "/home/ediaz/Documents/ace-synth/src/defines.v"
 
 module alucontrol(
 	input wire [5:0] funct,
 	input wire [5:0] opcode,
 	input wire aluop_in,
-	output reg [4:0] aluop_out = 0
+	output reg [4:0] aluop_out
 );
 
 always @* begin
@@ -30,10 +30,6 @@ always @* begin
 			`OP_J:    aluop_out <= aluop_out;
 			`OP_JAL:  aluop_out <= aluop_out;
 			`OP_ERET: aluop_out <= aluop_out;
-			`OP_RTYPE:
-				`WARN(("ALU Control: Unexpected OP_RTYPE"))
-			default:
-				`WARN(("ALU Control: Unknown opcode signal %x", opcode))
 		endcase
 	end else begin
 		casex (funct)
@@ -51,8 +47,6 @@ always @* begin
 			`FN_DIV: aluop_out <= `ALUOP_DIV;
 			`FN_JR:  aluop_out <= aluop_out;
 			`FN_SYS: aluop_out <= aluop_out;
-			default:
-				`WARN(("ALU Control: Unknown funct signal %x", funct))
 		endcase
 	end
 end
