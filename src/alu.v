@@ -1,7 +1,7 @@
 `ifndef _alu
 `define _alu
 
-`include "/home/quique/Documents/15-16/PD/ace-synth/src/defines.v"
+`include "/home/ediaz/Documents/ace-synth/src/defines.v"
 
 module alu(
 	input wire [4:0] aluop,

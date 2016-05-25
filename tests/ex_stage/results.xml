@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <testcase classname="test_ex_stage" name="ex_stage_coreop" time="0.2589859962463379" />
+  </testsuite>
+</testsuites>
