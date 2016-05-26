@@ -34,10 +34,10 @@ def regfile_write_enable(dut):
 		yield FallingEdge(dut.clk)
 		if reg == 0:
 			if (int(dut.rdata1) != 0 or int(dut.rdata2) != 0):
-					raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))
+				raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))
 		else:
 			if (int(dut.rdata1) != data or int(dut.rdata2) != data):
-					raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))
+				raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))
 
 @cocotb.test()
 def regfile_write_disabled(dut):
@@ -54,4 +54,4 @@ def regfile_write_disabled(dut):
 		dut.rreg2  = reg
 		yield FallingEdge(dut.clk)
 		if (int(dut.rdata1) != 0 or int(dut.rdata2) != 0):
-				raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))
+			raise TestFailure("Wrong w/r operation: %d, %d" % (reg,data))

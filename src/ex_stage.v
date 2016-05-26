@@ -57,22 +57,18 @@ module ex_stage (
 
 wire aluz;
 wire [4:0] aluop_out;
-wire [4:0] dst_regid;
 wire [31:0] alu_result;
+reg [4:0] dst_regid;
+reg [4:0] wreg;
 reg [31:0] exout;
 reg [31:0] data_s_alu;
 reg [31:0] data_t_alu;
-wire [31:0] wreg;
-wire [31:0] expc_branch;
-wire [31:0] exdst_jump;
+reg [31:0] expc_branch;
+reg [31:0] exdst_jump;
 
-assign exdst_jump   = dst_jump   ? data_s    : pc_jump;
-assign dst_regid    = dst_reg    ? reg_d     : reg_t;
-assign wreg         = is_link    ? 5'd31     : dst_regid;
-assign reg_probe    = wreg;
-assign data_probe   = exout;
-assign write_probe  = reg_write & ~mem_to_reg;
-assign expc_branch  = pc_next + (immediate << 2);
+assign reg_probe   = wreg;
+assign data_probe  = exout;
+assign write_probe = reg_write & ~mem_to_reg;
 
 alucontrol alucontrol(
 	.funct(funct),
@@ -91,9 +87,13 @@ alu alu(
 );
 
 always @(*) begin
-	data_s_alu   = alu_s      ? data_c0   : data_s;
-	data_t_alu   = alu_t      ? immediate : data_t;
-	exout        = is_link    ? pc_next   : alu_result;
+	data_s_alu  = alu_s    ? data_c0   : data_s;
+	data_t_alu  = alu_t    ? immediate : data_t;
+	exout       = is_link  ? pc_next   : alu_result;
+	dst_regid   = dst_reg  ? reg_d     : reg_t;
+	wreg        = is_link  ? 5'd31     : dst_regid;
+	exdst_jump  = dst_jump ? data_s   : pc_jump;
+	expc_branch = pc_next + (immediate << 2);
 end
 
 always @(posedge clk) begin
@@ -119,7 +119,7 @@ always @(posedge clk) begin
 		mem_write_out  = mem_write;
 		mem_type_out   = mem_type;
 		mem_to_reg_out = mem_to_reg;
-		alu_out        = exout; // exout
+		alu_out        = exout;
 		data_t_out     = data_t;
 		reg_addr       = wreg;
 		reg_write_out  = reg_write; 
