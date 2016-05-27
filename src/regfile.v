@@ -1,4 +1,4 @@
-`include "/home/quique/Documents/15-16/PD/ace-synth/src/defines.v"
+`include "/home/ediaz/Documents/ace-synth/src/defines.v"
 
 module regfile(
 	input wire clk,
