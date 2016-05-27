@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <testcase classname="test_alu" name="alu_add" time="0.00811004638671875" />
+    <testcase classname="test_alu" name="alu_and" time="0.008305788040161133" />
+    <testcase classname="test_alu" name="alu_beq" time="0.00726318359375" />
+    <testcase classname="test_alu" name="alu_bne" time="0.006761074066162109" />
+    <testcase classname="test_alu" name="alu_div" time="0.008011817932128906" />
+    <testcase classname="test_alu" name="alu_lui" time="0.00595402717590332" />
+    <testcase classname="test_alu" name="alu_mov" time="0.0063059329986572266" />
+    <testcase classname="test_alu" name="alu_mul" time="0.007887125015258789" />
+    <testcase classname="test_alu" name="alu_nor" time="0.008732080459594727" />
+    <testcase classname="test_alu" name="alu_or" time="0.0069768428802490234" />
+    <testcase classname="test_alu" name="alu_sll" time="0.008105039596557617" />
+    <testcase classname="test_alu" name="alu_slt" time="0.007475137710571289" />
+    <testcase classname="test_alu" name="alu_sra" time="0.006612062454223633" />
+    <testcase classname="test_alu" name="alu_srl" time="0.006442070007324219" />
+    <testcase classname="test_alu" name="alu_sub" time="0.008734941482543945" />
+    <testcase classname="test_alu" name="alu_xor" time="0.00728607177734375" />
+  </testsuite>
+</testsuites>

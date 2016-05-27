@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <testsuites name="results">
   <testsuite name="all" package="all" tests="0">
-    <testcase classname="test_hzdcontrol" name="hzdcontrol_test" time="0.0017199516296386719" />
+    <testcase classname="test_fwdcontrol" name="fwdcontrol_test" time="0.0021429061889648438" />
   </testsuite>
 </testsuites>

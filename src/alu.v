@@ -1,7 +1,5 @@
-`ifndef _alu
-`define _alu
-
-`include "/home/ediaz/Documents/ace-synth/src/defines.v"
+//`include "../../src/defines.v"
+`include "defines.v"
 
 module alu(
 	input wire [4:0] aluop,
@@ -44,7 +42,7 @@ always @* begin
 			out <= s - t;
 			if((s[31] != t[31]) && (out[31] != s[31])) overflow <= 1;
 			else overflow <= 0;
-		end	
+		end
         `ALUOP_AND: begin
 			zero <= 0;
 			overflow <= 0;
@@ -74,7 +72,7 @@ always @* begin
 			overflow <= 0;
 			out <= 32'd0;
 			if((s - t) == 0) zero <= 1;
-			else zero <= 0;		
+			else zero <= 0;
 		end
 		`ALUOP_BNE: begin
 			out <= 32'd0;
@@ -96,7 +94,7 @@ always @* begin
 		end
 		`ALUOP_DIV: begin
 			zero <= 0;
-			if(t == 0)  begin 
+			if(t == 0)  begin
 				overflow <= 1;
 				out <= 32'd0;
 			end	else begin
@@ -108,7 +106,7 @@ always @* begin
 		`ALUOP_MOV: begin
 			zero <= 0;
 			out <= s;
-		end		
+		end
 		default: begin
 			out <= 0;
 			zero <= 0;

@@ -8,7 +8,7 @@ module id_stage (
 	input wire stage_reset,
 	input wire we,
 	// Control signals
-	// Forward
+	// - Forward
 	output reg [4:0] rs_probe,
 	output reg [4:0] rt_probe,
 	input wire [1:0] ctrl_rs,
@@ -16,6 +16,8 @@ module id_stage (
 	input wire [31:0] ex_data,
 	input wire [31:0] mem_data,
 	input wire [31:0] wb_data,
+	// - Hazard
+	output reg [16:0] instr_top,
 	// Inputs
 	input wire [31:0] instruction,
 	input wire [31:0] pc_next,
