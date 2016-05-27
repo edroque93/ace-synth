@@ -64,7 +64,7 @@ always @(posedge clk or posedge reset) begin
 		hit      <= 1'b0;
 		mem_write_req  <= 1'b0;
 		mem_write_addr <= 32'h00000000;
-		mem_write_data <= 32'h00000000;
+		mem_write_data <= {WIDTH{1'b0}};
 		mem_read_req   <= 1'b0;
 		mem_read_addr  <= 32'h00000000;
 		// Reset memory

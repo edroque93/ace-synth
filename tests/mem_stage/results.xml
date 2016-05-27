@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name="results">
+  <testsuite name="all" package="all" tests="0">
+    <testcase classname="test_mem_stage" name="test_alu" time="0.0031359195709228516" />
+    <testcase classname="test_mem_stage" name="test_branch" time="0.0007648468017578125" />
+    <testcase classname="test_mem_stage" name="test_read" time="0.0009481906890869141" />
+    <testcase classname="test_mem_stage" name="test_write" time="0.0008509159088134766" />
+  </testsuite>
+</testsuites>
