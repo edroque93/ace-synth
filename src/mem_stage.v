@@ -97,7 +97,7 @@ always @(posedge clk or posedge reset) begin
 	end
 end
 
-// assigns
+// assigns really
 always @* begin
 	reg_probe   = reg_addr_next;
 	data_probe  = reg_data_next;

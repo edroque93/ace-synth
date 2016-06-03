@@ -1,13 +1,13 @@
-`include "/home/ediaz/Documents/ace-synth/src/defines.v"
-`include "/home/ediaz/Documents/ace-synth/src/alucontrol.v"
-`include "/home/ediaz/Documents/ace-synth/src/alu.v"
+`include "defines.v"
+`include "alucontrol.v"
+`include "alu.v"
 
 module ex_stage (
 	input wire clk,
 	input wire reset,
 	input wire we,
 	// Control signals
-	// - Forward 
+	// - Forward
 	output wire [4:0] reg_probe,
 	output wire [31:0] data_probe,
 	output wire write_probe,
@@ -108,7 +108,7 @@ always @(posedge clk) begin
 		alu_out        = 0;
 		data_t_out     = 0;
 		reg_addr       = 0;
-		reg_write_out  = 0; 
+		reg_write_out  = 0;
 		is_jump_out    = 0;
 		pc_jump_out    = 0;
 	end else if (we) begin
@@ -122,7 +122,7 @@ always @(posedge clk) begin
 		alu_out        = exout;
 		data_t_out     = data_t;
 		reg_addr       = wreg;
-		reg_write_out  = reg_write; 
+		reg_write_out  = reg_write;
 		is_jump_out    = is_jump;
 		pc_jump_out    = exdst_jump;
 	end

@@ -78,7 +78,7 @@ always @* begin
 	dc_write_ack_next = 0;
 	dc_read_ack_next  = 0;
 	ic_read_ack_next  = 0;
-	
+
 	case (state)
 		state_idle: begin
 			if (dc_write_req) begin
@@ -128,4 +128,4 @@ always @* begin
 	endcase
 end
 
-endmodule
+ndmodule

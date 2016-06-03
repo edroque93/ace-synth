@@ -1,11 +1,11 @@
-`include "/home/ediaz/Documents/ace-synth/src/control.v"
-`include "/home/ediaz/Documents/ace-synth/src/multiplexer.v"
-`include "/home/ediaz/Documents/ace-synth/src/regfile.v"
+`include "control.v"
+`include "multiplexer.v"
+`include "regfile.v"
 
 module id_stage (
 	input wire clk,
 	input wire reset,
-	input wire stage_reset,
+	input wire flush,
 	input wire we,
 	// Control signals
 	// - Forward
@@ -17,7 +17,7 @@ module id_stage (
 	input wire [31:0] mem_data,
 	input wire [31:0] wb_data,
 	// - Hazard
-	output reg [16:0] instr_top,
+	output reg [15:0] instr_top,
 	// Inputs
 	input wire [31:0] instruction,
 	input wire [31:0] pc_next,
@@ -126,10 +126,11 @@ multiplexer #(.X(4)) data_rt_mux ( // OK
 always @(*) begin
 	id_pc_jump = {pc_next[31:28], instruction[25:0], 2'b00};
 	id_imm     = {{16{instruction[15]}}, instruction[15:0]};
+	instr_top  = instruction[31:16];
 end
 
 always @(posedge clk) begin
-	if (reset | stage_reset) begin
+	if (reset | flush) begin
 		rs_probe    = 0;
 		rt_probe    = 0;
 		alu_s       = 0;

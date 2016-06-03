@@ -1,7 +1,4 @@
-`ifndef _alucontrol
-`define _alucontrol
-
-`include "/home/ediaz/Documents/ace-synth/src/defines.v"
+`include "defines.v"
 
 module alucontrol(
 	input wire [5:0] funct,
@@ -53,4 +50,3 @@ end
 
 endmodule
 
-`endif

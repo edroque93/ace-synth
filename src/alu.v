@@ -1,4 +1,3 @@
-//`include "../../src/defines.v"
 `include "defines.v"
 
 module alu(
@@ -16,54 +15,54 @@ reg [63:0] tmp = 0;
 
 always @* begin
 	case (aluop)
-        `ALUOP_SLL: begin
+		`ALUOP_SLL: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s << shamt;
 		end
-        `ALUOP_SRL: begin
+		`ALUOP_SRL: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s >> shamt;
 		end
-        `ALUOP_SRA: begin
+		`ALUOP_SRA: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s >>> shamt;
 		end
-        `ALUOP_ADD: begin
+		`ALUOP_ADD: begin
 			zero <= 0;
 			out <= s + t;
 			if((s[31] == t[31]) && (out[31] != s[31])) overflow <= 1;
 			else overflow <= 0;
 		end
-        `ALUOP_SUB: begin
-			zero <= 0;
+		`ALUOP_SUB: begin
+		zero <= 0;
 			out <= s - t;
 			if((s[31] != t[31]) && (out[31] != s[31])) overflow <= 1;
 			else overflow <= 0;
 		end
-        `ALUOP_AND: begin
+		`ALUOP_AND: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s & t;
 		end
-        `ALUOP_OR:  begin
+		`ALUOP_OR:  begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s | t;
 		end
-        `ALUOP_XOR: begin
+		`ALUOP_XOR: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= s ^ t;
 		end
-        `ALUOP_NOR: begin
+		`ALUOP_NOR: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= ~(s | t);
 		end
-        `ALUOP_SLT: begin
+		`ALUOP_SLT: begin
 			zero <= 0;
 			overflow <= 0;
 			out <= (s[31] != t[31]) ? (s[31] > t[31]) : (s < t);
@@ -115,5 +114,3 @@ always @* begin
 end
 
 endmodule
-
-`endif
