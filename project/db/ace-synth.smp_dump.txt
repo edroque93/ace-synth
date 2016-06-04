@@ -1,4 +1,10 @@
 
+State Machine - |ace-top|ace:inst|cpu:cpu|mem_stage:mem_stage|state
+Name state.state_idle state.state_write state.state_read 
+state.state_idle 0 0 0 
+state.state_read 1 0 1 
+state.state_write 1 1 0 
+
 State Machine - |ace-top|ace:inst|cpu:cpu|arbiter:arbiter|state
 Name state.state_dc_write state.state_dc_read state.state_ic_read state.state_idle 
 state.state_idle 0 0 0 0 

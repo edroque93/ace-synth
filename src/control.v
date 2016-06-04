@@ -1,4 +1,4 @@
-`include "/home/ediaz/Documents/ace-synth/src/defines.v"
+`include "defines.v"
 
 module control(
 	input wire [5:0] opcode,

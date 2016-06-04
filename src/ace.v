@@ -42,7 +42,7 @@ wire [2:0] io_state;
 wire [1:0] cpu_state;
 
 wire better_clock;
-wire cpu_clock = better_clock;
+wire cpu_clock = clock_50;
 wire reset_reseter;
 
 clock_delay clock_delay (

@@ -1,7 +1,3 @@
-`include "control.v"
-`include "multiplexer.v"
-`include "regfile.v"
-
 module id_stage (
 	input wire clk,
 	input wire reset,

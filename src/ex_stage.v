@@ -1,7 +1,3 @@
-`include "defines.v"
-`include "alucontrol.v"
-`include "alu.v"
-
 module ex_stage (
 	input wire clk,
 	input wire reset,

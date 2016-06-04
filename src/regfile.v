@@ -1,5 +1,3 @@
-`include "/home/ediaz/Documents/ace-synth/src/defines.v"
-
 module regfile(
 	input wire clk,
 	input wire reset,

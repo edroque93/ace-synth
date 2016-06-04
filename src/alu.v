@@ -1,5 +1,3 @@
-`include "defines.v"
-
 module alu(
 	input wire [4:0] aluop,
 	input wire [N-1:0] s,

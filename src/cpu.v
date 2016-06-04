@@ -95,7 +95,7 @@ wire [31:0] arbiter_mem_addr;
 wire [31:0] arbiter_mem_data_write;
 
 // Module arbiter
-arbiter arbiter
+arbiter arbiter (
 	.clk(clk),
 	.reset(reset),
 	.ic_read_req(if_stage_read_req),

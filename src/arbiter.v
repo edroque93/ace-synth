@@ -128,4 +128,4 @@ always @* begin
 	endcase
 end
 
-ndmodule
+endmodule
