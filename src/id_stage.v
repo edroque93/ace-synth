@@ -52,8 +52,8 @@ module id_stage (
 
 wire [31:0] reg_rs;
 wire [31:0] reg_rt;
-wire [31:0] id_data_rs;
-wire [31:0] id_data_rt;
+reg [31:0] id_data_rs;
+reg [31:0] id_data_rt;
 wire id_alu_s;
 wire id_alu_t;
 wire id_aluop;
@@ -109,17 +109,23 @@ regfile regfile( // OK
 	.wdata(reg_data)
 );
 
-multiplexer #(.X(4)) data_rs_mux ( // OK
-	.select(ctrl_rs),
-	.data_in({wb_data, mem_data, ex_data, reg_rs}),
-	.data_out(id_data_rs)
-);
+always @* begin
+	case (ctrl_rs)
+	0: id_data_rs = reg_rs;
+	1: id_data_rs = ex_data;
+	2: id_data_rs = mem_data;
+	3: id_data_rs = wb_data;
+	endcase
+end
 
-multiplexer #(.X(4)) data_rt_mux ( // OK
-	.select(ctrl_rt),
-	.data_in({wb_data, mem_data, ex_data, reg_rt}),
-	.data_out(id_data_rt)
-);
+always @* begin
+	case (ctrl_rs)
+	0: id_data_rt = reg_rt;
+	1: id_data_rt = ex_data;
+	2: id_data_rt = mem_data;
+	3: id_data_rt = wb_data;
+	endcase
+end
 
 always @(*) begin
 	id_pc_jump = {pc_next[31:28], instruction[25:0], 2'b00};
