@@ -38,7 +38,7 @@ flow_ctrl flow_ctrl (
 	.dc_stall(mem_stage_stall),
 	.is_branch(mem_stage_is_branch_out),
 	.is_jump(ex_stage_is_jump_out),
-	.hzd_stall(hazard_control_stall),
+	.hzd_stall(hazard_ctrl_stall),
 	.ic_stall(~if_stage_hit),
 	.pc_we(flow_ctrl_pc_we),
 	.pc_flush(flow_ctrl_pc_flush),
@@ -89,10 +89,6 @@ wire [31:0] arbiter_ic_read_data;
 wire arbiter_dc_read_ack;
 wire [31:0] arbiter_dc_read_data;
 wire arbiter_dc_write_ack;
-wire arbiter_mem_read;
-wire arbiter_mem_write;
-wire [31:0] arbiter_mem_addr;
-wire [31:0] arbiter_mem_data_write;
 
 // Module arbiter
 arbiter arbiter (
@@ -102,20 +98,20 @@ arbiter arbiter (
 	.ic_read_ack(arbiter_ic_read_ack),
 	.ic_read_addr(if_stage_read_addr),
 	.ic_read_data(arbiter_ic_read_data),
-	.dc_read_req(mem_stage_read_req),
+	.dc_read_req(mem_stage_mem_read_req),
 	.dc_read_ack(arbiter_dc_read_ack),
-	.dc_read_addr(mem_stage_read_addr),
+	.dc_read_addr(mem_stage_mem_read_addr),
 	.dc_read_data(arbiter_dc_read_data),
-	.dc_write_req(mem_stage_write_req),
+	.dc_write_req(mem_stage_mem_write_req),
 	.dc_write_ack(arbiter_dc_write_ack),
-	.dc_write_addr(mem_stage_write_addr),
-	.dc_write_data(mem_stage_write_data),
-	.mem_read(arbiter_mem_read),
-	.mem_write(arbiter_mem_write),
+	.dc_write_addr(mem_stage_mem_write_addr),
+	.dc_write_data(mem_stage_mem_write_data),
+	.mem_read(mem_read),
+	.mem_write(mem_write),
 	.mem_ack(mem_ack),
-	.mem_addr(arbiter_mem_addr),
-	.mem_data_write(arbiter_mem_data_write),
-	.mem_data_read(arbiter_mem_data_read)
+	.mem_addr(mem_addr),
+	.mem_data_write(mem_write_data),
+	.mem_data_read(mem_read_data)
 );
 
 
@@ -135,9 +131,9 @@ if_stage if_stage (
 	.pc_reset(flow_ctrl_pc_flush),
 	.pc_we(flow_ctrl_pc_we),
 	.is_jump(id_stage_is_jump),
-	.is_branch(ex_stage_is_branch),
-	.jump_addr(id_stage_jump_addr),
-	.branch_addr(ex_stage_branch_addr),
+	.is_branch(ex_stage_is_branch_out & ex_stage_alu_zero),
+	.jump_addr(id_stage_pc_jump),
+	.branch_addr(ex_stage_pc_branch),
 	.read_req(if_stage_read_req),
 	.read_ack(arbiter_ic_read_ack),
 	.read_addr(if_stage_read_addr),
@@ -150,7 +146,7 @@ if_stage if_stage (
 // Wires for id_stage
 wire [4:0] id_stage_rs_probe;
 wire [4:0] id_stage_rt_probe;
-wire [16:0] id_stage_instr_top;
+wire [15:0] id_stage_instr_top;
 wire id_stage_alu_s;
 wire id_stage_alu_t;
 wire id_stage_alu_op;
@@ -162,8 +158,9 @@ wire [31:0] id_stage_pc_jump;
 wire [31:0] id_stage_pc_next_out;
 wire [31:0] id_stage_data_s;
 wire [31:0] id_stage_data_t;
-wire [31:0] id_stage_data_c0;
+//wire [31:0] id_stage_data_c0;
 wire [5:0] id_stage_opcode;
+wire [5:0] id_stage_funct;
 wire [4:0] id_stage_reg_s;
 wire [4:0] id_stage_reg_t;
 wire [4:0] id_stage_reg_d;
@@ -180,7 +177,7 @@ id_stage id_stage (
 	.clk(clk),
 	.reset(reset),
 	.flush(flow_ctrl_id_flush),
-	.we(flow_ctrl_we),
+	.we(flow_ctrl_id_we),
 	.rs_probe(id_stage_rs_probe),
 	.rt_probe(id_stage_rt_probe),
 	.ctrl_rs(forward_ctrl_ctrl_rs),
@@ -202,20 +199,22 @@ id_stage id_stage (
 	.pc_next_out(id_stage_pc_next_out),
 	.data_s(id_stage_data_s),
 	.data_t(id_stage_data_t),
-	.data_c0(id_stage_data_c0),
+	//.data_c0(id_stage_data_c0),
 	.opcode(id_stage_opcode),
+	.funct(id_stage_funct),
 	.reg_s(id_stage_reg_s),
 	.reg_t(id_stage_reg_t),
 	.reg_d(id_stage_reg_d),
+	.reg_write_out(id_stage_reg_write_out),
 	.immediate(id_stage_immediate),
 	.is_branch(id_stage_is_branch),
 	.mem_read(id_stage_mem_read),
 	.mem_write(id_stage_mem_write),
 	.mem_type(id_stage_mem_type),
 	.mem_to_reg(id_stage_mem_to_reg),
-	.reg_addr(wb_stage_reg_addr),
-	.reg_data(wb_stage_reg_data),
-	.reg_write(wb_stage_reg_write)
+	.reg_addr(wb_stage_reg_addr_out),
+	.reg_data(wb_stage_reg_data_out),
+	.reg_write(wb_stage_reg_write_out)
 );
 
 // Wires for ex_stage
@@ -252,7 +251,7 @@ ex_stage ex_stage (
 	.is_jump(id_stage_is_jump),
 	.dst_jump(id_stage_dst_jump),
 	.pc_jump(id_stage_pc_jump),
-	.pc_next(id_stage_pc_next),
+	.pc_next(id_stage_pc_next_out),
 	.data_s(id_stage_data_s),
 	.data_t(id_stage_data_t),
 	.opcode(id_stage_opcode),
@@ -265,7 +264,7 @@ ex_stage ex_stage (
 	.mem_write(id_stage_mem_write),
 	.mem_type(id_stage_mem_type),
 	.mem_to_reg(id_stage_mem_to_reg),
-	.reg_write(id_stage_reg_write),
+	.reg_write(id_stage_reg_write_out),
 	.immediate(id_stage_immediate),
 	.is_branch_out(ex_stage_is_branch_out),
 	.pc_branch(ex_stage_pc_branch),
@@ -303,6 +302,7 @@ mem_stage mem_stage (
 	.clk(clk),
 	.reset(reset),
 	.we(flow_ctrl_mem_we),
+	.flush(flow_ctrl_mem_flush),
 	.reg_probe(mem_stage_reg_probe),
 	.data_probe(mem_stage_data_probe),
 	.write_probe(mem_stage_write_probe),
@@ -318,14 +318,14 @@ mem_stage mem_stage (
 	.is_branch(ex_stage_is_branch_out),
 	.pc_branch(ex_stage_pc_branch),
 	.alu_zero(ex_stage_alu_zero),
-	.mem_read(ex_stage_mem_read),
-	.mem_write(ex_stage_mem_write),
-	.mem_type(ex_stage_mem_type),
-	.mem_to_reg(ex_stage_mem_to_reg),
+	.mem_read(ex_stage_mem_read_out),
+	.mem_write(ex_stage_mem_write_out),
+	.mem_type(ex_stage_mem_type_out),
+	.mem_to_reg(ex_stage_mem_to_reg_out),
 	.alu_out(ex_stage_alu_out),
-	.data_t(ex_stage_data_t),
+	.data_t(ex_stage_data_t_out),
 	.reg_addr(ex_stage_reg_addr),
-	.reg_write(ex_stage_reg_write),
+	.reg_write(ex_stage_reg_write_out),
 	.reg_data(mem_stage_reg_data),
 	.reg_addr_out(mem_stage_reg_addr_out),
 	.reg_write_out(mem_stage_reg_write_out),
@@ -336,12 +336,14 @@ mem_stage mem_stage (
 // Wires for wb_stage
 wire [31:0] wb_stage_reg_data_out;
 wire [4:0] wb_stage_reg_addr_out;
+wire [4:0] wb_stage_reg_probe = mem_stage_reg_addr_out;
+wire [31:0] wb_stage_data_probe = mem_stage_reg_data;
 wire wb_stage_reg_write_out;
 
 // Module wb_stage
 wb_stage wb_stage (
 	.clk(clk),
-	.reset(reset),
+	.reset(reset | flow_ctrl_wb_flush),
 	.we(flow_ctrl_wb_we),
 	.reg_data(mem_stage_reg_data),
 	.reg_addr(mem_stage_reg_addr_out),

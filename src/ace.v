@@ -41,14 +41,14 @@ wire [31:0] mem_write_data;
 wire [2:0] io_state;
 wire [1:0] cpu_state;
 
-wire better_clock;
+//wire better_clock;
 wire cpu_clock = clock_50;
 wire reset_reseter;
 
-clock_delay clock_delay (
-	.clk(clock_50),
-	.clk_new(better_clock)
-);
+//clock_delay clock_delay (
+//	.clk(clock_50),
+//	.clk_new(better_clock)
+//);
 
 reseter reseter (
 	.clk(cpu_clock),
@@ -75,12 +75,15 @@ cpu cpu (
 	.hex7(hex7)
 );
 
+wire [7:0] ledg_alt;
+
 io_ctrl io_ctrl (
 	.clk(cpu_clock),
 	.reset(!key[0] | reset_reseter),
 	.sw(sw),
 	.key(key[3:1]),
 	.ledr(ledr),
+	.ledg(ledg_alt),
 	.sram_addr(sram_addr),
 	.sram_dq(sram_dq),
 	.sram_we_n(sram_we_n),
@@ -98,7 +101,7 @@ io_ctrl io_ctrl (
 );
 
 // Secuestrados.... MUAHAHAHHAHA
-assign ledg[7:5] = 0;
+assign ledg[7:5] = io_state;
 assign ledg[4] = mem_ack;
 assign ledg[3] = mem_read;
 assign ledg[2] = mem_write;

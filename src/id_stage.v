@@ -30,8 +30,9 @@ module id_stage (
 	output reg [31:0] pc_next_out,
 	output reg [31:0] data_s,
 	output reg [31:0] data_t,
-	output reg [31:0] data_c0,
+	//output reg [31:0] data_c0,
 	output reg [5:0] opcode,
+	output reg [5:0] funct,
 	output reg [4:0] reg_s,
 	output reg [4:0] reg_t,
 	output reg [4:0] reg_d,
@@ -45,7 +46,8 @@ module id_stage (
 	// - Wb
 	input wire [4:0] reg_addr,
 	input wire [31:0] reg_data,
-	output reg reg_write
+	input wire reg_write,
+	output reg reg_write_out
 );
 
 wire [31:0] reg_rs;
@@ -140,8 +142,9 @@ always @(posedge clk) begin
 		pc_next_out = 0;
 		data_s      = 0;
 		data_t      = 0;
-		data_c0     = 0;
+		//data_c0     = 0;
 		opcode      = 0;
+		funct       = 0;
 		reg_s       = 0;
 		reg_t       = 0;
 		reg_d       = 0;
@@ -150,7 +153,7 @@ always @(posedge clk) begin
 		mem_write   = 0;
 		mem_type    = 0;
 		mem_to_reg  = 0;
-		reg_write   = 0;
+		reg_write_out   = 0;
 		immediate   = 0;
 	end else if (we) begin
 		rs_probe    = instruction[25:21];
@@ -166,8 +169,9 @@ always @(posedge clk) begin
 		pc_next_out = pc_next;
 		data_s      = id_data_rs;
 		data_t      = id_data_rt;
-		data_c0     = 0;
+		//data_c0     = 0;
 		opcode      = instruction[31:26];
+		funct       = instruction[5:0];
 		reg_s       = instruction[25:21];
 		reg_t       = instruction[20:16];
 		reg_d       = instruction[15:11];
@@ -176,7 +180,7 @@ always @(posedge clk) begin
 		mem_write   = id_memwrite;
 		mem_type    = id_membyte;
 		mem_to_reg  = id_memtoreg;
-		reg_write   = id_regwrite;
+		reg_write_out   = id_regwrite;
 		immediate   = id_imm;
 	end
 end

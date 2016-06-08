@@ -1,0 +1,826 @@
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (12019): Can't analyze file -- file ../src/flipflop.v is missing
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(70): created implicit net for "wb_stage_write_probe"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(80): created implicit net for "mem_stage_mem_to_reg"
+Warning (10236): Verilog HDL Implicit Net warning at cpu.v(208): created implicit net for "id_stage_reg_write_out"
+Warning (10034): Output port "ledg[8]" at ace.v(29) has no driver
+Warning (10034): Output port "hex0" at cpu.v(11) has no driver
+Warning (10034): Output port "hex1" at cpu.v(12) has no driver
+Warning (10034): Output port "hex2" at cpu.v(13) has no driver
+Warning (10034): Output port "hex3" at cpu.v(14) has no driver
+Warning (10034): Output port "hex4" at cpu.v(15) has no driver
+Warning (10034): Output port "hex5" at cpu.v(16) has no driver
+Warning (10034): Output port "hex6" at cpu.v(17) has no driver
+Warning (10034): Output port "hex7" at cpu.v(19) has no driver
+Warning (10240): Verilog HDL Always Construct warning at arbiter.v(75): inferring latch(es) for variable "mem_addr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at arbiter.v(75): inferring latch(es) for variable "mem_data_write_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at arbiter.v(75): inferring latch(es) for variable "ic_read_data_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at arbiter.v(75): inferring latch(es) for variable "dc_read_data_next", which holds its previous value in one or more paths through the always construct
+Warning (10230): Verilog HDL assignment warning at if_stage.v(36): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at if_stage.v(63): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at if_stage.v(68): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at if_stage.v(78): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at if_stage.v(82): truncated value with size 32 to match size of target (1)
+Warning (10240): Verilog HDL Always Construct warning at if_stage.v(63): inferring latch(es) for variable "instruction_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at if_stage.v(63): inferring latch(es) for variable "pc_next_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at if_stage.v(63): inferring latch(es) for variable "pc_interm", which holds its previous value in one or more paths through the always construct
+Warning (10270): Verilog HDL Case Statement warning at control.v(27): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "regwrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "memtoreg", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "memread", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "memwrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "membyte", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "isbranch", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "regdst", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "alu_s", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "alu_t", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "aluop", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "isjump", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "jumpdst", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "islink", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "exc_ri", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "exc_sys", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "cowrite", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at control.v(27): inferring latch(es) for variable "exc_ret", which holds its previous value in one or more paths through the always construct
+Warning (10270): Verilog HDL Case Statement warning at alucontrol.v(12): incomplete case statement has no default case item
+Warning (10270): Verilog HDL Case Statement warning at alucontrol.v(32): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at alucontrol.v(11): inferring latch(es) for variable "aluop_out", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.v(15): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at alu.v(15): inferring latch(es) for variable "tmp", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mem_stage.v(108): inferring latch(es) for variable "mem_read_req_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mem_stage.v(108): inferring latch(es) for variable "mem_read_addr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mem_stage.v(108): inferring latch(es) for variable "mem_write_req_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mem_stage.v(108): inferring latch(es) for variable "mem_write_addr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at mem_stage.v(108): inferring latch(es) for variable "mem_write_data_next", which holds its previous value in one or more paths through the always construct
+Warning (10762): Verilog HDL Case Statement warning at io_ctrl.v(129): can't check case statement for completeness because the case expression has too many possible states
+Warning (10762): Verilog HDL Case Statement warning at io_ctrl.v(158): can't check case statement for completeness because the case expression has too many possible states
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "ledr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "ledg_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "addr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "wr_next", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "word", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "real_addr", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at io_ctrl.v(114): inferring latch(es) for variable "memwr_buffer", which holds its previous value in one or more paths through the always construct
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[0]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[1]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[2]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[3]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[4]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[5]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[6]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[7]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[8]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[9]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[10]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[11]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[12]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[13]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[14]" feeding internal logic into a wire
+	Warning (13049): Converted tri-state buffer "ace:inst|io_ctrl:io_ctrl|wr_next[15]" feeding internal logic into a wire
+Warning (14284): Synthesized away the following node(s):
+	Warning (14285): Synthesized away the following DSP element node(s):
+		Warning (14320): Synthesized away node "ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_mult7"
+		Warning (14320): Synthesized away node "ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|lpm_mult:Mult0|mult_7dt:auto_generated|mac_out8"
+Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledr_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[0]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|addr_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req_next has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_req_next has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|cpu:cpu|arbiter:arbiter|mem_addr_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_req
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[15]~15 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[14]~14 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[13]~13 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[12]~12 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[11]~11 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[10]~10 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[9]~9 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[8]~8 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[7]~7 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[6]~6 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[5]~5 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[4]~4 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[3]~3 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[2]~2 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[1]~1 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|wr_next[0]~0 has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|select
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|isjump has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[28]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|id_stage:id_stage|alu_op
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|id_stage:id_stage|opcode[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|id_stage:id_stage|alu_op
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|id_stage:id_stage|alu_op
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|id_stage:id_stage|alu_op
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|memwrite has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[30]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|memtoreg has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[30]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|isbranch has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[27]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|alu_s has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[26]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|alu_t has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[29]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|tmp[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_addr_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|if_stage:if_stage|pc_next_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|ledg[1]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_read_addr_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_read
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|aluop has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[29]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|regwrite has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[31]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|islink has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[26]
+Warning (13012): Latch ace:inst|cpu:cpu|id_stage:id_stage|control:control|regdst has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|if_stage:if_stage|instruction[26]
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|cpu:cpu|mem_stage:mem_stage|mem_write_data_next[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|mem_stage:mem_stage|state.state_write
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_read
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[9] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[10] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[11] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[12] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[13] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[14] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[15] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[16] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[17] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[18] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[19] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[20] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[21] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[22] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[23] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[24] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[25] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[26] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[27] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[28] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[29] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[30] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|word[31] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|io_ctrl:io_ctrl|state[1]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[0] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[1] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[2] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[3] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[4] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[5] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[6] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[7] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13012): Latch ace:inst|io_ctrl:io_ctrl|ledg_next[8] has unsafe behavior
+	Warning (13013): Ports D and ENA on the latch are fed by the same signal ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[31]
+Warning (13024): Output pins are stuck at VCC or GND
+	Warning (13410): Pin "sram_ub_n" is stuck at GND
+	Warning (13410): Pin "sram_lb_n" is stuck at GND
+	Warning (13410): Pin "sram_ce_n" is stuck at GND
+	Warning (13410): Pin "hex0[6]" is stuck at GND
+	Warning (13410): Pin "hex0[5]" is stuck at GND
+	Warning (13410): Pin "hex0[4]" is stuck at GND
+	Warning (13410): Pin "hex0[3]" is stuck at GND
+	Warning (13410): Pin "hex0[2]" is stuck at GND
+	Warning (13410): Pin "hex0[1]" is stuck at GND
+	Warning (13410): Pin "hex0[0]" is stuck at GND
+	Warning (13410): Pin "hex1[6]" is stuck at GND
+	Warning (13410): Pin "hex1[5]" is stuck at GND
+	Warning (13410): Pin "hex1[4]" is stuck at GND
+	Warning (13410): Pin "hex1[3]" is stuck at GND
+	Warning (13410): Pin "hex1[2]" is stuck at GND
+	Warning (13410): Pin "hex1[1]" is stuck at GND
+	Warning (13410): Pin "hex1[0]" is stuck at GND
+	Warning (13410): Pin "hex2[6]" is stuck at GND
+	Warning (13410): Pin "hex2[5]" is stuck at GND
+	Warning (13410): Pin "hex2[4]" is stuck at GND
+	Warning (13410): Pin "hex2[3]" is stuck at GND
+	Warning (13410): Pin "hex2[2]" is stuck at GND
+	Warning (13410): Pin "hex2[1]" is stuck at GND
+	Warning (13410): Pin "hex2[0]" is stuck at GND
+	Warning (13410): Pin "hex3[6]" is stuck at GND
+	Warning (13410): Pin "hex3[5]" is stuck at GND
+	Warning (13410): Pin "hex3[4]" is stuck at GND
+	Warning (13410): Pin "hex3[3]" is stuck at GND
+	Warning (13410): Pin "hex3[2]" is stuck at GND
+	Warning (13410): Pin "hex3[1]" is stuck at GND
+	Warning (13410): Pin "hex3[0]" is stuck at GND
+	Warning (13410): Pin "hex4[6]" is stuck at GND
+	Warning (13410): Pin "hex4[5]" is stuck at GND
+	Warning (13410): Pin "hex4[4]" is stuck at GND
+	Warning (13410): Pin "hex4[3]" is stuck at GND
+	Warning (13410): Pin "hex4[2]" is stuck at GND
+	Warning (13410): Pin "hex4[1]" is stuck at GND
+	Warning (13410): Pin "hex4[0]" is stuck at GND
+	Warning (13410): Pin "hex5[6]" is stuck at GND
+	Warning (13410): Pin "hex5[5]" is stuck at GND
+	Warning (13410): Pin "hex5[4]" is stuck at GND
+	Warning (13410): Pin "hex5[3]" is stuck at GND
+	Warning (13410): Pin "hex5[2]" is stuck at GND
+	Warning (13410): Pin "hex5[1]" is stuck at GND
+	Warning (13410): Pin "hex5[0]" is stuck at GND
+	Warning (13410): Pin "hex6[6]" is stuck at GND
+	Warning (13410): Pin "hex6[5]" is stuck at GND
+	Warning (13410): Pin "hex6[4]" is stuck at GND
+	Warning (13410): Pin "hex6[3]" is stuck at GND
+	Warning (13410): Pin "hex6[2]" is stuck at GND
+	Warning (13410): Pin "hex6[1]" is stuck at GND
+	Warning (13410): Pin "hex6[0]" is stuck at GND
+	Warning (13410): Pin "hex7[6]" is stuck at GND
+	Warning (13410): Pin "hex7[5]" is stuck at GND
+	Warning (13410): Pin "hex7[4]" is stuck at GND
+	Warning (13410): Pin "hex7[3]" is stuck at GND
+	Warning (13410): Pin "hex7[2]" is stuck at GND
+	Warning (13410): Pin "hex7[1]" is stuck at GND
+	Warning (13410): Pin "hex7[0]" is stuck at GND
+	Warning (13410): Pin "ledg[8]" is stuck at GND
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Warning (335093): TimeQuest Timing Analyzer is analyzing 467 combinational loops as latches.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_write_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|if_stage:if_stage|instruction[26] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|ic_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_ic_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_idle was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: key[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|id_stage:id_stage|alu_op was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_dc_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[20] was determined to be a clock but was found without an associated clock assignment.
+Warning (169177): 17 pins must meet Altera requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing Cyclone IV E Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
+	Info (169178): Pin sram_dq[15] uses I/O standard 3.3-V LVTTL at AG3
+	Info (169178): Pin sram_dq[14] uses I/O standard 3.3-V LVTTL at AF3
+	Info (169178): Pin sram_dq[13] uses I/O standard 3.3-V LVTTL at AE4
+	Info (169178): Pin sram_dq[12] uses I/O standard 3.3-V LVTTL at AE3
+	Info (169178): Pin sram_dq[11] uses I/O standard 3.3-V LVTTL at AE1
+	Info (169178): Pin sram_dq[10] uses I/O standard 3.3-V LVTTL at AE2
+	Info (169178): Pin sram_dq[9] uses I/O standard 3.3-V LVTTL at AD2
+	Info (169178): Pin sram_dq[8] uses I/O standard 3.3-V LVTTL at AD1
+	Info (169178): Pin sram_dq[7] uses I/O standard 3.3-V LVTTL at AF7
+	Info (169178): Pin sram_dq[6] uses I/O standard 3.3-V LVTTL at AH6
+	Info (169178): Pin sram_dq[5] uses I/O standard 3.3-V LVTTL at AG6
+	Info (169178): Pin sram_dq[4] uses I/O standard 3.3-V LVTTL at AF6
+	Info (169178): Pin sram_dq[3] uses I/O standard 3.3-V LVTTL at AH4
+	Info (169178): Pin sram_dq[2] uses I/O standard 3.3-V LVTTL at AG4
+	Info (169178): Pin sram_dq[1] uses I/O standard 3.3-V LVTTL at AF4
+	Info (169178): Pin sram_dq[0] uses I/O standard 3.3-V LVTTL at AH3
+	Info (169178): Pin clock_50 uses I/O standard 3.3-V LVTTL at Y2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (335093): TimeQuest Timing Analyzer is analyzing 467 combinational loops as latches.
+Warning (332060): Node: ace:inst|cpu:cpu|id_stage:id_stage|alu_op was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|ic_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_write_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|if_stage:if_stage|instruction[26] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_ic_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_idle was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: key[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_dc_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[20] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|id_stage:id_stage|alu_op was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|ic_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_write_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|if_stage:if_stage|instruction[26] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_ic_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_idle was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: key[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_dc_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[20] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|id_stage:id_stage|alu_op was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|ic_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_write_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|if_stage:if_stage|instruction[26] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_ic_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_idle was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: key[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|dc_read_ack was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|state.state_dc_read was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|ex_stage:ex_stage|alucontrol:alucontrol|aluop_out[0] was determined to be a clock but was found without an associated clock assignment.
+Warning (332060): Node: ace:inst|cpu:cpu|arbiter:arbiter|mem_addr[20] was determined to be a clock but was found without an associated clock assignment.

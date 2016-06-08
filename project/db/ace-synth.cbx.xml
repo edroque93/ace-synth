@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="ace-synth">
+		<CBX_INST_ENTRY INSTANCE_NAME="|ace-top|ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_hkm.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|ace-top|ace:inst|cpu:cpu|ex_stage:ex_stage|alu:alu|lpm_mult:Mult0" CBX_FILE_NAME="mult_7dt.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

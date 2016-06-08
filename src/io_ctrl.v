@@ -33,14 +33,14 @@ module io_ctrl(
 	output wire sram_lb_n,
 	output wire sram_ce_n,
 	// 7-Segment display
-	output reg [6:0] hex0,
-	output reg [6:0] hex1,
-	output reg [6:0] hex2,
-	output reg [6:0] hex3,
-	output reg [6:0] hex4,
-	output reg [6:0] hex5,
-	output reg [6:0] hex6,
-	output reg [6:0] hex7,
+	//output reg [6:0] hex0,
+	//output reg [6:0] hex1,
+	//output reg [6:0] hex2,
+	//output reg [6:0] hex3,
+	//output reg [6:0] hex4,
+	//output reg [6:0] hex5,
+	//output reg [6:0] hex6,
+	//output reg [6:0] hex7,
 	// Buttons
 	input wire [2:0] key,
 	// Red LEDs
