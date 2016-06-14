@@ -15,8 +15,36 @@ module cpu (
 	output wire [6:0] hex4,
 	output wire [6:0] hex5,
 	output wire [6:0] hex6,
-	output wire [6:0] hex7
+	output wire [6:0] hex7,
+	output wire [17:0] ledr
 );
+
+assign ledr[0] = clk;
+
+assign ledr[1] = arbiter_ic_read_ack;
+assign ledr[2] = if_stage_read_req;
+//assign ledr[3] = arbiter_dc_read_ack;
+//assign ledr[4] = mem_stage_mem_read_req;
+//assign ledr[5] = arbiter_dc_write_ack;
+//assign ledr[6] = mem_stage_mem_write_req;
+
+assign ledr[3] = flow_ctrl_pc_flush;
+assign ledr[4] = flow_ctrl_pc_we;
+assign ledr[5] = flow_ctrl_if_flush;
+assign ledr[6] = flow_ctrl_if_we;
+assign ledr[7] = flow_ctrl_id_flush;
+assign ledr[8] = flow_ctrl_id_we;
+assign ledr[9] = flow_ctrl_ex_flush;
+assign ledr[10] = flow_ctrl_ex_we;
+assign ledr[11] = flow_ctrl_mem_flush;
+assign ledr[12] = flow_ctrl_mem_we;
+assign ledr[13] = flow_ctrl_wb_flush;
+assign ledr[14] = 1; // rip
+assign ledr[15] = flow_ctrl_wb_we;
+
+assign ledr[16] = mem_stage_stall;
+assign ledr[17] = if_stage_hit;
+
 
 // Wires for flow_ctrl
 wire flow_ctrl_pc_we;
@@ -351,6 +379,47 @@ wb_stage wb_stage (
 	.reg_data_out(wb_stage_reg_data_out),
 	.reg_addr_out(wb_stage_reg_addr_out),
 	.reg_write_out(wb_stage_reg_write_out)
+);
+
+segments_converter seg0 (
+	.enable(1),
+	.value(mem_addr[3:0]),
+	.value_converted(hex0)
+);
+segments_converter seg1 (
+	.enable(1),
+	.value(mem_addr[7:4]),
+	.value_converted(hex1)
+);
+segments_converter seg2 (
+	.enable(1),
+	.value(mem_addr[11:8]),
+	.value_converted(hex2)
+);
+segments_converter seg3 (
+	.enable(1),
+	.value(mem_addr[15:12]),
+	.value_converted(hex3)
+);
+segments_converter seg4 (
+	.enable(1),
+	.value(mem_addr[19:16]),
+	.value_converted(hex4)
+);
+segments_converter seg5 (
+	.enable(1),
+	.value(mem_addr[23:20]),
+	.value_converted(hex5)
+);
+segments_converter seg6 (
+	.enable(1),
+	.value(mem_addr[27:24]),
+	.value_converted(hex6)
+);
+segments_converter seg7 (
+	.enable(1),
+	.value(mem_addr[31:28]),
+	.value_converted(hex7)
 );
 
 endmodule

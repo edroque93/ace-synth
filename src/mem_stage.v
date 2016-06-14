@@ -73,10 +73,10 @@ always @(posedge clk or posedge reset) begin
 		mem_read_addr  <= 32'h00000000;
 	end else begin
 		state <= state_next;
-		mem_write_req  <= mem_write_req_next;
+		mem_write_req  <= 0; //mem_write_req_next;
 		mem_write_addr <= mem_write_addr_next;
 		mem_write_data <= mem_write_data_next;
-		mem_read_req   <= mem_read_req_next;
+		mem_read_req   <= 0; //mem_read_req_next;
 		mem_read_addr  <= mem_read_addr_next;
 		if (flush) begin
 			is_branch_out <= 1'b0;

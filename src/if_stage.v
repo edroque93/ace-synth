@@ -38,23 +38,21 @@ always @(posedge clk) begin
 		read_addr <= 32'd0;
 		instruction <= 32'd0;
 		pc_next <= 32'd0;
-		hit <= 0;
-	end else if(flush) begin
-		read_addr <= 32'd0;
-		instruction <= 32'd0;
-		pc_next <= 32'd0;
-		hit <= 0;
 	end else begin
-		if(we) begin
-			state <= state_next;
-			read_req <= read_req_next;
-			read_addr <= pc_next_next;
+		if(flush) begin
+			instruction <= 32'd0;
+			pc_next <= 32'd0;
+		end else if (we) begin
 			pc_next <= pc_next_next + 4;
 			instruction <= instruction_next;
-			hit <= hit_next;
 		end
+		state <= state_next;
+		read_req <= read_req_next;
+		read_addr <= pc_next_next;
 	end
 end
+
+always @* hit = hit_next;
 
 // State machine
 localparam state_idle = 0, state_read = 1;
