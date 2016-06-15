@@ -1,3 +1,8 @@
+`ifdef TEST_COCOTB
+	`include "control.v"
+	`include "regfile.v"
+`endif
+
 module id_stage (
 	input wire clk,
 	input wire reset,
