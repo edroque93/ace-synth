@@ -19,7 +19,7 @@
 ## PROGRAM "Quartus II"
 ## VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition"
 
-## DATE    "Fri Jun  3 17:28:08 2016"
+## DATE    "Wed Jun  8 21:07:50 2016"
 
 ##
 ## DEVICE  "EP4CE115F29C7"
@@ -38,7 +38,7 @@ set_time_format -unit ns -decimal_places 3
 # Create Clock
 #**************************************************************
 
-create_clock -name {CLK} -period 20.000 -waveform { 0.000 10.000 } [get_ports {clock_50}]
+create_clock -name {CLOCK} -period 20.000 -waveform { 0.000 10.000 } [get_ports {clock_50}]
 
 
 #**************************************************************
