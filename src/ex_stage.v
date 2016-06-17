@@ -36,6 +36,8 @@ module ex_stage (
 	// - Mem
 	output reg is_branch_out,
 	output reg [31:0] pc_branch,
+	output reg is_jump_out,
+	output reg [31:0] pc_jump_out,
 	output reg alu_zero,
 	output reg mem_read_out,
 	output reg mem_write_out,
@@ -45,10 +47,7 @@ module ex_stage (
 	output reg [31:0] data_t_out,
 	output reg [4:0] reg_addr,
 	// - Wb
-	output reg reg_write_out,
-	// Feedback
-	output reg is_jump_out,
-	output reg [31:0] pc_jump_out
+	output reg reg_write_out
 );
 
 wire aluz;

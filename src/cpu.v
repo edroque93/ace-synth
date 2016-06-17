@@ -19,33 +19,6 @@ module cpu (
 	output wire [17:0] ledr
 );
 
-assign ledr[0] = clk;
-
-assign ledr[1] = arbiter_ic_read_ack;
-assign ledr[2] = if_stage_read_req;
-//assign ledr[3] = arbiter_dc_read_ack;
-//assign ledr[4] = mem_stage_mem_read_req;
-//assign ledr[5] = arbiter_dc_write_ack;
-//assign ledr[6] = mem_stage_mem_write_req;
-
-assign ledr[3] = flow_ctrl_pc_flush;
-assign ledr[4] = flow_ctrl_pc_we;
-assign ledr[5] = flow_ctrl_if_flush;
-assign ledr[6] = flow_ctrl_if_we;
-assign ledr[7] = flow_ctrl_id_flush;
-assign ledr[8] = flow_ctrl_id_we;
-assign ledr[9] = flow_ctrl_ex_flush;
-assign ledr[10] = flow_ctrl_ex_we;
-assign ledr[11] = flow_ctrl_mem_flush;
-assign ledr[12] = flow_ctrl_mem_we;
-assign ledr[13] = flow_ctrl_wb_flush;
-assign ledr[14] = 1; // rip
-assign ledr[15] = flow_ctrl_wb_we;
-
-assign ledr[16] = mem_stage_stall;
-assign ledr[17] = if_stage_hit;
-
-
 // Wires for flow_ctrl
 wire flow_ctrl_pc_we;
 wire flow_ctrl_pc_flush;
@@ -64,7 +37,7 @@ wire flow_ctrl_wb_flush;
 flow_ctrl flow_ctrl (
 	.reset(reset),
 	.dc_stall(mem_stage_stall),
-	.is_branch(mem_stage_is_branch_out),
+	.is_branch(ex_stage_is_branch_out),
 	.is_jump(ex_stage_is_jump_out),
 	.hzd_stall(hazard_ctrl_stall),
 	.ic_stall(~if_stage_hit),
@@ -92,10 +65,10 @@ forward_ctrl forward_ctrl (
 	.rt(id_stage_rt_probe),
 	.ex_reg(ex_stage_reg_probe),
 	.mem_reg(mem_stage_reg_probe),
-	.wb_reg(wb_stage_reg_probe),
+	.wb_reg(wb_stage_reg_addr_out),
 	.ex_write(ex_stage_write_probe),
 	.mem_write(mem_stage_write_probe),
-	.wb_write(wb_stage_write_probe),
+	.wb_write(wb_stage_reg_write_out),
 	.ctrl_rs(forward_ctrl_ctrl_rs),
 	.ctrl_rt(forward_ctrl_ctrl_rt)
 );
@@ -158,9 +131,9 @@ if_stage if_stage (
 	.we(flow_ctrl_if_we),
 	.pc_reset(flow_ctrl_pc_flush),
 	.pc_we(flow_ctrl_pc_we),
-	.is_jump(id_stage_is_jump),
+	.is_jump(ex_stage_is_jump),
 	.is_branch(ex_stage_is_branch_out & ex_stage_alu_zero),
-	.jump_addr(id_stage_pc_jump),
+	.jump_addr(ex_stage_pc_jump_out),
 	.branch_addr(ex_stage_pc_branch),
 	.read_req(if_stage_read_req),
 	.read_ack(arbiter_ic_read_ack),
@@ -212,7 +185,7 @@ id_stage id_stage (
 	.ctrl_rt(forward_ctrl_ctrl_rt),
 	.ex_data(ex_stage_data_probe),
 	.mem_data(mem_stage_data_probe),
-	.wb_data(wb_stage_data_probe),
+	.wb_data(wb_stage_reg_data_out),
 	.instr_top(id_stage_instr_top),
 	.instruction(if_stage_instruction),
 	.pc_next(if_stage_pc_next),
@@ -227,7 +200,6 @@ id_stage id_stage (
 	.pc_next_out(id_stage_pc_next_out),
 	.data_s(id_stage_data_s),
 	.data_t(id_stage_data_t),
-	//.data_c0(id_stage_data_c0),
 	.opcode(id_stage_opcode),
 	.funct(id_stage_funct),
 	.reg_s(id_stage_reg_s),
@@ -251,6 +223,8 @@ wire [31:0] ex_stage_data_probe;
 wire ex_stage_write_probe;
 wire ex_stage_is_branch_out;
 wire [31:0] ex_stage_pc_branch;
+wire ex_stage_is_jump_out;
+wire [31:0] ex_stage_pc_jump_out;
 wire ex_stage_alu_zero;
 wire ex_stage_mem_read_out;
 wire ex_stage_mem_write_out;
@@ -260,8 +234,6 @@ wire [31:0] ex_stage_alu_out;
 wire [31:0] ex_stage_data_t_out;
 wire [4:0] ex_stage_reg_addr;
 wire ex_stage_reg_write_out;
-wire ex_stage_is_jump_out;
-wire [31:0] ex_stage_pc_jump_out;
 
 // Module ex_stage
 ex_stage ex_stage (
@@ -296,6 +268,8 @@ ex_stage ex_stage (
 	.immediate(id_stage_immediate),
 	.is_branch_out(ex_stage_is_branch_out),
 	.pc_branch(ex_stage_pc_branch),
+	.is_jump_out(ex_stage_is_jump_out),
+	.pc_jump_out(ex_stage_pc_jump_out),
 	.alu_zero(ex_stage_alu_zero),
 	.mem_read_out(ex_stage_mem_read_out),
 	.mem_write_out(ex_stage_mem_write_out),
@@ -304,9 +278,7 @@ ex_stage ex_stage (
 	.alu_out(ex_stage_alu_out),
 	.data_t_out(ex_stage_data_t_out),
 	.reg_addr(ex_stage_reg_addr),
-	.reg_write_out(ex_stage_reg_write_out),
-	.is_jump_out(ex_stage_is_jump_out),
-	.pc_jump_out(ex_stage_pc_jump_out)
+	.reg_write_out(ex_stage_reg_write_out)
 );
 
 // Wires for mem_stage
@@ -322,8 +294,6 @@ wire mem_stage_stall;
 wire [31:0] mem_stage_reg_data;
 wire [4:0] mem_stage_reg_addr_out;
 wire mem_stage_reg_write_out;
-wire mem_stage_is_branch_out;
-wire [31:0] mem_stage_pc_branch_out;
 
 // Module mem_stage
 mem_stage mem_stage (
@@ -356,9 +326,7 @@ mem_stage mem_stage (
 	.reg_write(ex_stage_reg_write_out),
 	.reg_data(mem_stage_reg_data),
 	.reg_addr_out(mem_stage_reg_addr_out),
-	.reg_write_out(mem_stage_reg_write_out),
-	.is_branch_out(mem_stage_is_branch_out),
-	.pc_branch_out(mem_stage_pc_branch_out)
+	.reg_write_out(mem_stage_reg_write_out)
 );
 
 // Wires for wb_stage
@@ -381,44 +349,74 @@ wb_stage wb_stage (
 	.reg_write_out(wb_stage_reg_write_out)
 );
 
+
+// Debugging
+
+assign ledr[14] = 1; // rip
+
+assign ledr[0] = clk;
+assign ledr[1] = arbiter_ic_read_ack;
+assign ledr[2] = if_stage_read_req;
+assign ledr[3] = flow_ctrl_pc_flush;
+assign ledr[4] = flow_ctrl_pc_we;
+assign ledr[5] = flow_ctrl_if_flush;
+assign ledr[6] = flow_ctrl_if_we;
+assign ledr[7] = flow_ctrl_id_flush;
+assign ledr[8] = flow_ctrl_id_we;
+assign ledr[9] = flow_ctrl_ex_flush;
+assign ledr[10] = flow_ctrl_ex_we;
+assign ledr[11] = flow_ctrl_mem_flush;
+assign ledr[12] = flow_ctrl_mem_we;
+assign ledr[13] = flow_ctrl_wb_flush;
+assign ledr[15] = flow_ctrl_wb_we;
+assign ledr[16] = mem_stage_stall;
+assign ledr[17] = if_stage_hit;
+
+wire [31:0] to_hex ;
+assign to_hex = if_stage_instruction;
+
+
+// endmodule
+
+
 segments_converter seg0 (
 	.enable(1),
-	.value(mem_addr[3:0]),
+	.value(to_hex[3:0]),
 	.value_converted(hex0)
 );
 segments_converter seg1 (
 	.enable(1),
-	.value(mem_addr[7:4]),
+	.value(to_hex[7:4]),
 	.value_converted(hex1)
 );
 segments_converter seg2 (
 	.enable(1),
-	.value(mem_addr[11:8]),
+	.value(to_hex[11:8]),
 	.value_converted(hex2)
 );
 segments_converter seg3 (
 	.enable(1),
-	.value(mem_addr[15:12]),
+	.value(to_hex[15:12]),
 	.value_converted(hex3)
 );
 segments_converter seg4 (
 	.enable(1),
-	.value(mem_addr[19:16]),
+	.value(to_hex[19:16]),
 	.value_converted(hex4)
 );
 segments_converter seg5 (
 	.enable(1),
-	.value(mem_addr[23:20]),
+	.value(to_hex[23:20]),
 	.value_converted(hex5)
 );
 segments_converter seg6 (
 	.enable(1),
-	.value(mem_addr[27:24]),
+	.value(to_hex[27:24]),
 	.value_converted(hex6)
 );
 segments_converter seg7 (
 	.enable(1),
-	.value(mem_addr[31:28]),
+	.value(to_hex[31:28]),
 	.value_converted(hex7)
 );
 

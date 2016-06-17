@@ -59,8 +59,6 @@ reg        reg_write_next;
 
 always @(posedge clk or posedge reset) begin
 	if (reset) begin
-		is_branch_out <= 1'b0;
-		pc_branch_out <= 32'h00000000;
 		reg_data      <= 32'h00000000;
 		reg_addr_out  <= 5'b00000;
 		reg_write_out <= 1'b0;
@@ -73,10 +71,10 @@ always @(posedge clk or posedge reset) begin
 		mem_read_addr  <= 32'h00000000;
 	end else begin
 		state <= state_next;
-		mem_write_req  <= 0; //mem_write_req_next;
+		mem_write_req  <= 0; // mem_write_req_next;
 		mem_write_addr <= mem_write_addr_next;
 		mem_write_data <= mem_write_data_next;
-		mem_read_req   <= 0; //mem_read_req_next;
+		mem_read_req   <= 0; // mem_read_req_next;
 		mem_read_addr  <= mem_read_addr_next;
 		if (flush) begin
 			is_branch_out <= 1'b0;
@@ -87,8 +85,6 @@ always @(posedge clk or posedge reset) begin
 			reg_write_out <= 1'b0;
 			stall <= 1'b0;
 		end else if (we) begin
-			is_branch_out <= alu_zero & is_branch;
-			pc_branch_out <= pc_branch;
 			reg_data      <= reg_data_next;
 			reg_addr_out  <= reg_addr_next;
 			reg_write_out <= reg_write_next;

@@ -30,7 +30,6 @@ module id_stage (
 	output reg [31:0] pc_next_out,
 	output reg [31:0] data_s,
 	output reg [31:0] data_t,
-	//output reg [31:0] data_c0,
 	output reg [5:0] opcode,
 	output reg [5:0] funct,
 	output reg [4:0] reg_s,
@@ -148,7 +147,6 @@ always @(posedge clk) begin
 		pc_next_out = 0;
 		data_s      = 0;
 		data_t      = 0;
-		//data_c0     = 0;
 		opcode      = 0;
 		funct       = 0;
 		reg_s       = 0;
@@ -175,7 +173,6 @@ always @(posedge clk) begin
 		pc_next_out = pc_next;
 		data_s      = id_data_rs;
 		data_t      = id_data_rt;
-		//data_c0     = 0;
 		opcode      = instruction[31:26];
 		funct       = instruction[5:0];
 		reg_s       = instruction[25:21];

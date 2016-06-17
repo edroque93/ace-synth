@@ -13,17 +13,15 @@ module wb_stage (
 	output reg 	  reg_write_out
 );
 
-always @(posedge clk) begin
+always @(*) begin
    if(reset) begin
       reg_data_out <= 0;
       reg_addr_out <= 0;
       reg_write_out <= 0;
    end else begin
-	 if(we) begin
 	    reg_data_out <= reg_data;
 	    reg_addr_out <= reg_addr;
 	    reg_write_out <= reg_write;
-	 end
    end
 end
 
